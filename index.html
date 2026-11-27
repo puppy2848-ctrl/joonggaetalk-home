@@ -448,6 +448,275 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
   html{scroll-behavior:auto}
   *{transition:none!important;animation:none!important}
 }
+
+/* ================= compact content blocks ================= */
+.punch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.punch li{position:relative;padding:20px 22px;background:var(--mist);border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:8px}
+.punch b{display:block;font-size:15.5px;line-height:1.55;letter-spacing:-.02em;color:var(--ink);font-weight:600}
+.punch span{display:block;margin-top:8px;padding-top:8px;border-top:1px solid var(--line-2);font-size:13.8px;color:#7B8699;line-height:1.5}
+.punch span::before{content:"\2192  ";color:var(--blue);font-weight:700}
+
+.rev-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.rev{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 22px 18px;display:flex;flex-direction:column}
+.rev-stars{font-size:12.5px;letter-spacing:.16em;color:var(--blue);line-height:1}
+.rev h3{margin-top:10px;font-size:15.5px;line-height:1.5;letter-spacing:-.028em;font-weight:700;color:var(--navy)}
+.rev-body{margin-top:8px;font-size:14.2px;line-height:1.68;color:#4C5871}
+.rev-who{margin-top:auto;padding-top:14px;display:flex;align-items:center;gap:10px}
+.rev-who .av{width:32px;height:32px;border-radius:50%;background:var(--mist-2);display:flex;align-items:center;justify-content:center;font-size:13.5px;font-weight:700;color:var(--blue);flex:0 0 auto}
+.rev-who b{display:block;font-size:13.5px;color:var(--ink);font-weight:600;line-height:1.4}
+.rev-who div>span{display:block;font-size:12.3px;color:var(--muted);line-height:1.4}
+
+.map-card{margin-top:18px;display:flex;align-items:center;gap:18px 26px;padding:22px 26px;background:var(--navy);border-radius:10px;flex-wrap:wrap}
+.map-card>div{flex:1;min-width:250px}
+.map-card .map-k{font-size:12px;font-weight:700;letter-spacing:.1em;color:#8FB4F5;text-transform:uppercase}
+.map-card b{display:block;margin-top:6px;font-size:18px;line-height:1.45;letter-spacing:-.028em;color:#fff;font-weight:700}
+.map-card p{margin-top:4px;font-size:14px;line-height:1.6;color:#B9C9E4}
+.map-card .btn{flex:0 0 auto;margin-left:auto}
+
+.maker{margin-top:26px;display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:32px;align-items:center;padding-top:26px;border-top:1px solid var(--line)}
+.maker-photo{margin:0}
+.maker-photo img{width:100%;border-radius:8px;border:1px solid var(--line)}
+.maker-photo figcaption{margin-top:8px;font-size:12.3px;color:var(--muted)}
+.maker h3{margin-top:10px;font-size:clamp(21px,1.9vw,26px);line-height:1.4;letter-spacing:-.03em;color:var(--navy);font-weight:700}
+.maker-copy p{margin-top:12px;font-size:15px;line-height:1.75;color:#4C5871}
+.maker-copy p b{color:var(--navy);font-weight:700}
+.maker-copy .story-idx{margin-top:0;font-size:12.5px;letter-spacing:.1em}
+.maker-sign{margin-top:16px;font-size:13.5px;font-weight:700;color:var(--blue);letter-spacing:-.02em}
+
+/* ================= compact spacing pass ================= */
+.sec{padding:54px 0}
+.sec-head{margin-bottom:28px}
+.sec-head h2{font-size:clamp(24px,2.5vw,32px);line-height:1.34}
+.sec-sub{margin-top:9px;font-size:15.5px;line-height:1.72}
+.hero{padding-top:38px}
+.hero-grid{gap:44px;padding-bottom:26px}
+.hero-lead{margin-top:18px;font-size:15.8px;line-height:1.72}
+.cta-row{margin-top:22px}
+.def{padding:20px 0 22px;gap:36px}
+.def dd{font-size:16px;line-height:1.7}
+.facts li{padding:16px 20px 17px}
+.facts dd{font-size:18px;margin-top:4px}
+.why-foot{margin-top:16px;padding:14px 20px;font-size:15px}
+.feat{padding:32px 0;gap:44px}
+.feat:first-of-type{padding-top:2px}
+.feat h3{margin-top:9px;font-size:clamp(20px,1.9vw,25px)}
+.feat p.desc{margin-top:9px;font-size:15.2px;line-height:1.7}
+.feat ul{margin-top:12px;gap:6px}
+.feat ul li{font-size:14.8px;line-height:1.55}
+.fig-32 img{aspect-ratio:16/10}
+.feat-free{margin-top:12px;padding:10px 12px}
+.video-grid{gap:20px}
+.player-meta{padding:12px 16px 13px}
+.player-meta h3{font-size:16.5px}
+.vid-list{gap:7px}
+.vid-item{grid-template-columns:100px minmax(0,1fr);gap:11px;padding:7px}
+.vid-body b{font-size:13.6px}
+.vid-note{margin-top:14px;font-size:13px}
+.letter{margin-bottom:14px}
+.letter-main{padding:18px 20px}
+.letter-def{margin-top:8px;font-size:15.5px;line-height:1.7}
+.letter-points{margin-top:12px;padding-top:10px}
+.letter-link{margin-top:10px}
+.letter-free{padding:18px 20px}
+.letter-free .v{font-size:34px}
+.cmp-col header{padding:14px 18px}
+.cmp-col ul{padding:4px 18px 10px}
+.cmp-col li{padding:9px 0;font-size:14.5px}
+.cmp-price{padding:12px 18px 14px}
+.cmp-price .val{font-size:21px}
+.save{margin-top:14px;padding:14px 18px}
+.save p{font-size:15px}
+.pay-note{margin-top:10px;font-size:12.5px}
+.assure{margin-top:20px}
+.assure li{padding:12px 16px;font-size:13.5px}
+.faq summary{padding:15px 0;font-size:16px}
+.faq summary .ic{width:22px;height:22px}
+.faq summary .ic::before,.faq summary .ic::after{left:5px;right:5px;top:10px}
+.faq .ans{padding:0 0 16px 46px;font-size:15px;line-height:1.72}
+.final{padding:46px 0}
+.final h2{font-size:clamp(22px,2.3vw,29px)}
+.ftr{padding:38px 0 28px}
+.ftr-top{padding-bottom:24px;gap:28px}
+.ftr-biz{padding-top:16px}
+.ftr-copy{margin-top:10px}
+
+@media (max-width:1120px){
+  .punch{grid-template-columns:1fr;gap:10px}
+  .rev-grid{grid-template-columns:1fr 1fr}
+  .maker{grid-template-columns:1fr;gap:20px}
+  .maker-photo{max-width:460px}
+  .map-card .btn{margin-left:0}
+}
+@media (max-width:760px){
+  .sec{padding:40px 0}
+  .sec-head{margin-bottom:20px}
+  .punch li{padding:16px 18px}
+  .rev-grid{grid-template-columns:1fr;gap:10px}
+  .rev{padding:18px 18px 14px}
+  .map-card{padding:18px 18px;gap:14px}
+  .map-card .btn{width:100%}
+  .feat{padding:26px 0;gap:18px}
+  .feat-copy{max-width:none}
+  .faq .ans{padding-left:0}
+  .final{padding:40px 0 96px}
+}
+
+/* ================= compact pass 2 ================= */
+.sec{padding:48px 0}
+.sec-head{margin-bottom:24px}
+body{font-size:16px}
+.feat-fig{max-width:520px}
+.fig-32 img{aspect-ratio:3/2}
+.fig-45{max-width:300px}
+.feat{padding:28px 0}
+.feat ul li{font-size:14.4px}
+.def dd{font-size:15.5px}
+.hero-lead{font-size:15.5px}
+.faq summary{padding:14px 0}
+@media (max-width:1120px){
+  .feat-fig{max-width:100%}
+}
+@media (max-width:760px){
+  .sec{padding:38px 0}
+  .sec-head{margin-bottom:18px}
+  .hero-lead{font-size:14.8px;line-height:1.68}
+  .feat{padding:24px 0;gap:16px}
+  .fig-45{max-width:260px}
+  .feat ul li{font-size:14px}
+  .def dd{font-size:15px}
+  .rev-grid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;margin:0 -20px;padding:0 20px 6px}
+  .rev{flex:0 0 84%;scroll-snap-align:start;padding:18px 18px 14px}
+  .rev-body{font-size:13.8px;line-height:1.62}
+  .map-card{padding:16px 18px}
+  .map-card b{font-size:16.5px}
+  .map-card p{font-size:13.4px}
+  .maker{margin-top:18px;padding-top:18px;gap:16px}
+  .maker-photo{max-width:300px}
+  .maker-copy p{font-size:14.4px;line-height:1.7}
+  .letter-main{padding:16px 16px}
+  .letter-def{font-size:14.6px;line-height:1.65}
+  .letter-points{grid-template-columns:1fr;gap:6px;margin-top:10px;padding-top:9px}
+  .letter-free{padding:14px 16px}
+  .letter-free .v{font-size:28px}
+  .cmp{gap:12px}
+  .cmp-col header{padding:11px 14px}
+  .cmp-col ul{padding:2px 14px 6px}
+  .cmp-col li{padding:7px 0;font-size:13.8px}
+  .cmp-price{padding:9px 14px 11px}
+  .cmp-price .val{font-size:18px}
+  .save{padding:12px 14px;margin-top:12px}
+  .save p{font-size:14.2px}
+  .assure{grid-template-columns:1fr 1fr!important}
+  .assure li{padding:10px 12px;font-size:12.6px}
+  .assure b{font-size:13.2px}
+  .faq .ans{font-size:14.4px;line-height:1.7}
+  .ftr-top{grid-template-columns:1fr 1fr;gap:18px;padding-bottom:18px}
+  .ftr-top>div:first-child{grid-column:1/-1}
+  .ftr{font-size:13px}
+  .ftr-biz{font-size:12px;line-height:1.7}
+  .final{padding:36px 0 88px}
+  .final h2{font-size:20.5px}
+  .final p{font-size:14.2px}
+}
+
+/* ================= compact pass 3 ================= */
+.sec{padding:44px 0}
+.sec-head h2{font-size:clamp(23px,2.35vw,30px)}
+.hero{padding-top:34px}
+.hero-grid{padding-bottom:22px;gap:40px}
+.feat{padding:24px 0}
+.feat h3{font-size:clamp(19px,1.8vw,24px);margin-top:8px}
+.feat p.desc{margin-top:8px;font-size:14.8px;line-height:1.66}
+.feat ul{margin-top:10px}
+.feat-note,.feat-free{margin-top:10px}
+@media (min-width:1121px){.video-grid{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:18px}}
+.vid-item{grid-template-columns:92px minmax(0,1fr)}
+.rev{padding:20px 20px 16px}
+.map-card{margin-top:14px;padding:18px 22px}
+.maker{margin-top:20px;padding-top:20px}
+.cmp-col li{padding:8px 0}
+.assure{margin-top:16px}
+.faq summary{padding:13px 0}
+.final{padding:40px 0}
+.ftr{padding:32px 0 24px}
+@media (max-width:760px){
+  .sec{padding:32px 0}
+  .sec-head h2{font-size:21px;line-height:1.32}
+  .sec-sub{font-size:14.4px;line-height:1.65}
+  .hero{padding-top:26px}
+  .hero-grid{padding-bottom:18px;gap:22px}
+  .feat{padding:20px 0;gap:12px}
+  .feat h3{margin-top:7px}
+  .feat p.desc{margin-top:7px;font-size:14px;line-height:1.62}
+  .feat ul{margin-top:9px;gap:5px}
+  .feat ul li{font-size:13.6px}
+  .feat-no{font-size:12px}
+  .feat-no span{font-size:12.8px}
+  .fig-45{max-width:230px}
+  .fig-32 img{aspect-ratio:16/10}
+  .vid-item{grid-template-columns:84px minmax(0,1fr);gap:9px;padding:6px}
+  .vid-body b{font-size:12.8px}
+  .vid-body span{font-size:11.8px}
+  .player-meta{padding:10px 12px 11px}
+  .player-meta h3{font-size:15px}
+  .rev{padding:16px 16px 12px}
+  .rev h3{font-size:14.4px}
+  .rev-body{font-size:13.2px;line-height:1.6}
+  .rev-who{padding-top:10px}
+  .map-card{margin-top:12px;padding:14px 16px}
+  .maker{margin-top:16px;padding-top:16px}
+  .maker h3{font-size:19px}
+  .maker-copy p{font-size:13.8px;line-height:1.66;margin-top:9px}
+  .letter-main{padding:14px}
+  .cmp-col li{padding:6px 0}
+  .assure li{padding:9px 10px}
+  .faq summary{padding:12px 0;font-size:14.8px}
+  .faq summary .q{font-size:12px}
+  .faq summary .ic{width:20px;height:20px}
+  .faq summary .ic::before,.faq summary .ic::after{left:4px;right:4px;top:9px}
+  .faq .ans{font-size:13.8px;line-height:1.66;padding-bottom:12px}
+  .final{padding:32px 0 84px}
+  .final p{font-size:13.6px}
+  .ftr{padding:26px 0 20px}
+}
+
+/* narrow figure (letter) */
+.feat--narrow .feat-fig{max-width:320px;width:100%;justify-self:center}
+.feat--narrow .fig-45{max-width:100%}
+@media (max-width:760px){.feat--narrow .feat-fig{max-width:250px}}
+
+@media (max-width:760px){
+  .feat figcaption{display:none}
+  .feat .fig-frame{margin-top:2px}
+}
+
+/* ================= compact pass 4 ================= */
+.sec{padding:38px 0}
+.sec-head{margin-bottom:20px}
+.sec-head h2{font-size:clamp(22px,2.25vw,29px)}
+.sec-sub{font-size:15px;margin-top:8px}
+.hero{padding-top:30px}
+.hero-grid{padding-bottom:18px}
+.def{padding:16px 0 18px}
+.facts li{padding:14px 18px 15px}
+.feat{padding:20px 0}
+.feat-fig{max-width:480px}
+.faq summary{padding:12px 0}
+.final{padding:34px 0}
+.ftr{padding:28px 0 20px}
+.ftr-top{padding-bottom:18px}
+.map-card{margin-top:12px;padding:16px 20px}
+.maker{margin-top:16px;padding-top:16px}
+@media (max-width:760px){
+  .sec{padding:28px 0}
+  .sec-head{margin-bottom:14px}
+  .hero{padding-top:22px}
+  .def{padding:12px 0 14px}
+  .feat{padding:16px 0}
+  .faq-more{margin-top:10px}
+  .final{padding:28px 0 80px}
+  .ftr{padding:22px 0 16px}
+}
 </style>
 </head>
 <body>
@@ -463,8 +732,9 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
       <a href="#about">중개톡이란</a>
       <a href="#why">왜 써야 하나</a>
       <a href="#features">핵심 기능</a>
-      <a href="#video">영상 보기</a>
-      <a href="#pricing">요금·무료 혜택</a>
+      <a href="#video">사용 영상</a>
+      <a href="#reviews">후기</a>
+      <a href="#pricing">요금·혜택</a>
       <a href="#faq">자주 묻는 질문</a>
     </nav>
     <div class="hdr-cta">
@@ -532,43 +802,23 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
 </section>
 
 <!-- ================= WHY ================= -->
-<section class="sec" id="why">
+<section class="sec why" id="why">
   <div class="wrap">
     <header class="sec-head">
       <p class="sec-idx"><b>01</b>왜 써야 하나</p>
       <div>
-        <h2>광고비는 매달 나가는데,<br>상담한 손님은 어디로 갔을까요.</h2>
-        <p class="sec-sub">중개사무소에서 반복해서 벌어지는 세 가지 일입니다. 중개톡은 이 세 곳에서 새는 손님과 시간을 막는 데만 집중합니다.</p>
+        <h2>광고비는 매달 나가는데,<br>그 손님은 누구 것이 됩니까.</h2>
+        <p class="sec-sub">중개사무소에서 반복되는 세 가지 손실입니다. 중개톡은 이 세 곳에서 새는 손님과 시간만 막습니다.</p>
       </div>
     </header>
 
-    <div class="why-table">
-      <div class="why-head" aria-hidden="true">
-        <span>현장에서 벌어지는 일</span>
-        <span>그래서 잃는 것</span>
-        <span>중개톡을 쓰면</span>
-      </div>
-      <div class="why-row">
-        <div class="c c-t" data-l="현장"><p>네이버·직방 광고로 상담까지 했는데, 연락처는 수첩과 엑셀에 흩어져 있습니다.</p></div>
-        <div class="c c-loss" data-l="잃는 것"><p>광고비는 계속 나가는데, 다시 연락할 손님이 없습니다.</p></div>
-        <div class="c c-sol" data-l="중개톡"><p>상담 고객을 <b>한 번만 등록</b>해 두면, 만기·안부 알림톡이 일정에 맞춰 자동으로 나갑니다.</p></div>
-      </div>
-      <div class="why-row">
-        <div class="c c-t" data-l="현장"><p>만기 3개월 전에 챙겨야 하는데, 바쁘면 그냥 지나갑니다.</p></div>
-        <div class="c c-loss" data-l="잃는 것"><p>재계약·갱신 상담 기회를 그대로 흘려보냅니다.</p></div>
-        <div class="c c-sol" data-l="중개톡"><p>계약일만 넣으면 <b>D-90·D-30·연말 안내</b>까지 예약 발송됩니다.</p></div>
-      </div>
-      <div class="why-row">
-        <div class="c c-t" data-l="현장"><p>사무소 홈페이지를 만들려면 견적부터 수십~수백만 원입니다.</p></div>
-        <div class="c c-loss" data-l="잃는 것"><p>견적만 받고 몇 달씩 미루게 됩니다.</p></div>
-        <div class="c c-sol" data-l="중개톡"><p>중개톡 회원에게는 <b>레터 모바일 홈페이지가 0원</b>, 실거래가와 내 매물이 자동으로 채워집니다.</p></div>
-      </div>
-    </div>
+    <ul class="punch">
+      <li><b>상담까지 하고도 연락처는 수첩·엑셀에 흩어집니다.</b><span>다시 연락할 손님이 없습니다.</span></li>
+      <li><b>만기 3개월 전, 바쁘면 그냥 지나갑니다.</b><span>재계약 상담을 그대로 흘려보냅니다.</span></li>
+      <li><b>홈페이지 견적은 수백만 원, 몇 달씩 미룹니다.</b><span>그사이 옆 사무소가 먼저 보냅니다.</span></li>
+    </ul>
 
-    <p class="why-foot">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      세 가지 모두, 계약서 한 장을 등록하는 데서 시작합니다.
-    </p>
+    <p class="why-foot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>세 가지 모두, 계약서 한 장을 등록하는 데서 막힙니다.</p>
   </div>
 </section>
 
@@ -586,12 +836,11 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
     <article class="feat">
       <div class="feat-copy">
         <p class="feat-no">01 <span>만기·잔금·명절 자동 알림톡</span></p>
-        <h3>손대지 않아도, 만기와 안부는 나갑니다.</h3>
-        <p class="desc">계약일과 만기일만 넣어 두면 3개월 전·1개월 전 안내와 연말 인사가 예약대로 발송됩니다. 카카오 알림톡이라 문자처럼 묻히지 않고, 고객은 채널에서 바로 답장합니다.</p>
+        <h3>계약 한 번 등록하면, 만기와 안부는 알아서 나갑니다.</h3>
+        <p class="desc">만기 3개월 전·1개월 전 안내와 연말 인사가 예약대로 나갑니다. 카카오 알림톡이라 문자처럼 묻히지 않고, 고객은 채널에서 바로 답장합니다.</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>계약 등록만 하면 만기일 자동 계산</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>명절·연말 안부, 대상만 골라 일괄 예약</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>발송 결과와 실패 건을 목록에서 확인</li>
         </ul>
       </div>
       <figure class="feat-fig">
@@ -604,10 +853,9 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
       <div class="feat-copy">
         <p class="feat-no">02 <span>등기부 변동 실시간 감시</span></p>
         <h3>잔금 뒤에 생긴 변동까지, 먼저 알려 드립니다.</h3>
-        <p class="desc">소유권 이전, 근저당 설정, 가압류. 임차인이 모르고 지나칠 수 있는 등기부 변동을 중개톡이 감시하고, 변동이 잡히면 임차인에게 먼저 안내합니다. “이 중개사는 끝까지 책임진다”는 신뢰가 남습니다.</p>
+        <p class="desc">소유권 이전·근저당·가압류가 잡히면 임차인에게 먼저 안내합니다. “이 중개사는 끝까지 책임진다”는 신뢰가 남습니다.</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>소유권·근저당·가압류 변동 감지</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>변동 시 임차인 안내 알림톡 발송</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>변동 감지 즉시 임차인에게 알림톡</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>계약 고객은 감시 기간 동안 자동 관리</li>
         </ul>
       </div>
@@ -621,10 +869,9 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
       <div class="feat-copy">
         <p class="feat-no">03 <span>동호수 배치도 · 고객·매물 DB</span></p>
         <h3>수첩 대신, 한 번의 검색으로 찾습니다.</h3>
-        <p class="desc">단지별 동·호수 현황과 상담 이력을 한 화면에 모읍니다. “그 집 임차인이 누구였지”를 수첩에서 뒤지지 않고, 동·호수나 고객 이름으로 바로 찾습니다. 엑셀·구글 주소록 고객도 한 번에 옮겨 옵니다.</p>
+        <p class="desc">동·호수 현황과 상담 이력을 한 화면에 모읍니다. “그 집 임차인이 누구였지”를 수첩에서 뒤지지 않습니다.</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>단지별 동호수 배치도와 계약 현황</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>고객·물건·계약·상담 메모 통합</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>엑셀·CSV·구글 주소록 대량 등록</li>
         </ul>
       </div>
@@ -634,11 +881,11 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
       </figure>
     </article>
 
-    <article class="feat feat--flip">
+    <article class="feat feat--flip feat--narrow">
       <div class="feat-copy">
         <p class="feat-no">04 <span>중개톡 레터 — 회원에게 무료 배포</span></p>
         <h3>중개톡 회원이면, 내 사무소 모바일 홈페이지가 무료로 생깁니다.</h3>
-        <p class="desc">중개톡 레터는 우리 동네 아파트 실거래가와 부동산 칼럼, 내 사무소 매물을 한곳에 담은 <b>중개사 전용 모바일 홈페이지</b>입니다. 링크 하나로 카톡·문자에 붙여 보내면 고객은 앱 설치 없이 바로 열어 보고, 중개톡 회원에게는 이 홈페이지를 무료로 배포합니다.</p>
+        <p class="desc">우리 동네 실거래가와 내 매물을 담은 <b>중개사 전용 모바일 홈페이지</b>. 링크 하나로 보내면 고객은 앱 설치 없이 바로 열어 봅니다.</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>우리 동네 아파트 실거래가 자동 정리</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>부동산 칼럼·지역 소식까지 한 페이지에</li>
@@ -661,7 +908,7 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
       <p class="sec-idx"><b>03</b>영상 보기</p>
       <div>
         <h2>말로 설명하는 것보다,<br>화면으로 보시는 게 빠릅니다.</h2>
-        <p class="sec-sub">중개톡 공식 채널 <b>@No.1_중개톡</b>과 나는 중개사 채널에 실제 사용 과정을 그대로 올려 두었습니다. 아래에서 바로 재생해 보세요.</p>
+        <p class="sec-sub">공식 채널에 실제 사용 과정을 그대로 올려 두었습니다. 바로 재생해 보세요.</p>
       </div>
     </header>
 
@@ -714,21 +961,75 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
   </div>
 </section>
 
-<!-- ================= STORY ================= -->
-<section class="story" id="story">
-  <div class="wrap story-grid">
-    <figure class="story-photo">
-      <img src="assets/photo-seminar.jpg" alt="중개사 현장 설명회에서 중개톡 프로그램 사용법을 설명하는 모습" loading="lazy">
-      <figcaption>중개사 현장 설명회</figcaption>
-    </figure>
-    <div>
-      <p class="story-idx">04 만든 사람</p>
-      <h2>IT 회사 책상에서 만든<br>프로그램이 아닙니다.</h2>
-      <p>18년째 현장에서 중개업소를 운영하는 현업 공인중개사가 실제 실무에 쓰려고 직접 기획하고 만든 프로그램입니다. 만기를 챙기다가 놓친 손님, 등기 변동을 몰라 난처했던 일, 견적만 받고 미뤄 둔 홈페이지 — 그 일들을 하나씩 프로그램 안으로 옮겼습니다.</p>
-      <p>그래서 기능이 화려하지 않습니다. 대신 <b>계약서 한 장을 등록하면 그 뒤로 벌어지는 일</b> — 만기 계산, 안내 발송, 등기 확인, 고객 검색 — 이 실제 업무 순서대로 움직입니다. 지금도 대표가 자기 사무소에서 매일 쓰고, 불편한 부분은 개발자와 함께 고쳐 왔습니다.</p>
-      <div class="story-sign">
-        <b>18년 차 현업 공인중개사 직접 기획 · 실무 검증</b>
-        <span>현장 실무 중심 중개 프로그램</span>
+<!-- ================= TRUST: reviews + member map + maker ================= -->
+<section class="sec sec--mist" id="reviews">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="sec-idx"><b>04</b>현장 후기·회원 지도</p>
+      <div>
+        <h2>현장에서 쓰고 계신 분들이<br>먼저 말합니다.</h2>
+        <p class="sec-sub">중개톡을 쓰고 달라진 점을 직접 남겨 주셨습니다. 전국에서 쓰는 사무소는 회원 지도에서 확인하실 수 있습니다.</p>
+      </div>
+    </header>
+
+    <div class="rev-grid">
+      <article class="rev">
+        <p class="rev-stars" aria-label="별점 5점">★★★★★</p>
+        <h3>만기 알림, 이제 제가 안 챙겨도 나갑니다</h3>
+        <p class="rev-body">전세 만기마다 전화·문자 돌리느라 정신이 없었는데, 계약 한 번만 넣어두니 알아서 알림톡이 나갑니다. 놓치는 고객이 없어졌습니다.</p>
+        <div class="rev-who"><span class="av" aria-hidden="true">김</span><div><b>김OO 대표</b><span>인천 계양구 · 개업 11년 차</span></div></div>
+      </article>
+      <article class="rev">
+        <p class="rev-stars" aria-label="별점 5점">★★★★★</p>
+        <h3>등기 변동까지 챙긴다고 하니 상담이 달라졌어요</h3>
+        <p class="rev-body">계약 후 근저당이 잡히면 바로 알려주니, 임차인분들께 자신 있게 말할 수 있습니다. 신뢰가 쌓이니 소개가 따라왔습니다.</p>
+        <div class="rev-who"><span class="av" aria-hidden="true">박</span><div><b>박OO 대표</b><span>경기 수원시 · 개업 6년 차</span></div></div>
+      </article>
+      <article class="rev">
+        <p class="rev-stars" aria-label="별점 5점">★★★★★</p>
+        <h3>홈페이지 견적 300만 원, 그 돈 아꼈습니다</h3>
+        <p class="rev-body">제작 견적만 받고 몇 달 미루고 있었는데, 중개톡 레터가 더 깔끔합니다. 우리 동네 실거래가가 자동으로 올라오니 고객들이 링크를 계속 엽니다.</p>
+        <div class="rev-who"><span class="av" aria-hidden="true">이</span><div><b>이OO 대표</b><span>서울 송파구 · 개업 4년 차</span></div></div>
+      </article>
+      <article class="rev">
+        <p class="rev-stars" aria-label="별점 5점">★★★★★</p>
+        <h3>컴퓨터가 서툴러도 원격으로 다 해 주셨어요</h3>
+        <p class="rev-body">시작을 망설였는데, 원격 지원으로 화면을 같이 보면서 세팅부터 첫 발송까지 알려 주셨어요. 다음 날부터 바로 쓰고 있습니다.</p>
+        <div class="rev-who"><span class="av" aria-hidden="true">최</span><div><b>최OO 대표</b><span>충남 천안시 · 개업 8년 차</span></div></div>
+      </article>
+      <article class="rev">
+        <p class="rev-stars" aria-label="별점 5점">★★★★★</p>
+        <h3>손님이 먼저 “요즘도 챙겨주시네요” 합니다</h3>
+        <p class="rev-body">만기 알림이 알아서 나가니 손님들이 먼저 연락을 주십니다. 바쁜 날에도 관계가 끊기지 않는 게 제일 좋아요.</p>
+        <div class="rev-who"><span class="av" aria-hidden="true">정</span><div><b>정명숙 대표</b><span>경기 수원시 · 개업 9년 차</span></div></div>
+      </article>
+      <article class="rev">
+        <p class="rev-stars" aria-label="별점 5점">★★★★★</p>
+        <h3>광고비 한 푼 안 들이고 단골이 늘었습니다</h3>
+        <p class="rev-body">명절·시세 안부 톡을 꾸준히 받으시니 “여기 사장님은 늘 챙겨주신다”며 소개를 많이 해 주십니다.</p>
+        <div class="rev-who"><span class="av" aria-hidden="true">김</span><div><b>김영자 대표</b><span>인천 남동구 · 개업 13년 차</span></div></div>
+      </article>
+    </div>
+
+    <div class="map-card">
+      <div>
+        <p class="map-k">중개톡 회원 지도</p>
+        <b>전국에서 중개톡을 쓰는 사무소를 지도에서 한눈에.</b>
+        <p>우리 동네 중개톡 회원이 어디에 있는지 바로 확인하실 수 있습니다.</p>
+      </div>
+      <a class="btn btn-blue" href="https://joonggaetalk.co.kr/members" target="_blank" rel="noopener">회원 지도 열기 ↗</a>
+    </div>
+
+    <div class="maker">
+      <figure class="maker-photo">
+        <img src="assets/photo-seminar.jpg" alt="중개사 현장 설명회에서 중개톡 사용법을 설명하는 모습" loading="lazy">
+        <figcaption>중개사 현장 설명회</figcaption>
+      </figure>
+      <div class="maker-copy">
+        <p class="story-idx">18년 차 현업 공인중개사</p>
+        <h3>IT 회사 책상에서 만든 프로그램이 아닙니다.</h3>
+        <p>18년째 현장에서 사무소를 운영하는 공인중개사가 직접 기획하고, 지금도 매일 쓰는 프로그램입니다. 기능이 화려하지 않은 대신 <b>계약서 한 장을 등록하면 그 뒤로 벌어지는 일</b> — 만기 계산, 안내 발송, 등기 확인, 고객 검색 — 이 실제 업무 순서대로 움직입니다.</p>
+        <div class="maker-sign"><b>18년 차 현업 공인중개사 직접 기획 · 실무 검증</b></div>
       </div>
     </div>
   </div>
@@ -741,7 +1042,7 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
       <p class="sec-idx"><b>05</b>요금·무료 혜택</p>
       <div>
         <h2>중개톡 회원에게는<br><em>모바일 홈페이지</em>를 무료로 드립니다.</h2>
-        <p class="sec-sub">그 홈페이지가 바로 <b>중개톡 레터</b>입니다. 우리 동네 아파트 실거래가·부동산 칼럼·내 사무소 매물을 한곳에 담아 고객에게 링크 하나로 바로 보낼 수 있는 <b>중개사 전용 모바일 홈페이지</b>를, 중개톡 회원에게는 무료로 배포합니다.</p>
+        <p class="sec-sub">그 홈페이지가 바로 <b>중개톡 레터</b>입니다.<br>중개톡 회원에게는 <b>중개사 전용 모바일 홈페이지</b>를 무료로 배포합니다.</p>
       </div>
     </header>
 
@@ -781,7 +1082,7 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
       <div class="cmp-col is-now">
         <header><h3>중개톡으로 한 번에</h3><span class="tag">추천</span></header>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="k">중개톡 레터 <em>(모바일 홈페이지)</em><br><span class="free-tag">중개톡 회원 무료 배포</span></span><span class="v">0원</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="k">중개톡 레터 <em>(모바일 홈페이지)</em></span><span class="v">0원</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="k">만기·명절 안부</span><span class="v">자동 알림톡</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="k">등기부 변동 확인</span><span class="v">실시간 감시</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="k">물건·고객 관리</span><span class="v">한 화면 통합</span></li>
@@ -900,6 +1201,7 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
         <ul>
           <li><a href="#features">핵심 기능</a></li>
           <li><a href="#video">사용 영상</a></li>
+          <li><a href="#reviews">현장 후기</a></li>
           <li><a href="#pricing">요금·무료 혜택</a></li>
           <li><a href="#faq">자주 묻는 질문</a></li>
         </ul>
