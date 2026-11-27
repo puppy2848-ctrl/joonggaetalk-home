@@ -289,31 +289,9 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
 .assure li{background:#fff;padding:16px 18px;font-size:14px;color:#33405C}
 .assure b{display:block;font-size:14.5px;color:var(--navy);font-weight:700;margin-bottom:3px;letter-spacing:-.02em}
 
-/* ---------- letter card (pricing) ---------- */
-.letter{display:grid;grid-template-columns:minmax(0,1fr) 320px;border:1px solid #CFE0FA;border-radius:10px;background:#fff;overflow:hidden;margin-bottom:20px}
-.letter-main{padding:24px 26px}
-.letter-q{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;color:var(--blue);letter-spacing:.06em}
-.letter-q::before{content:"";width:7px;height:7px;background:var(--blue);border-radius:1px}
-.letter-def{margin-top:10px;font-size:16.5px;line-height:1.74;color:#2A3752;letter-spacing:-.022em}
-.letter-def b{color:var(--navy);font-weight:700}
-.letter-points{margin-top:16px;padding-top:14px;border-top:1px solid var(--line-2);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 16px}
-.letter-points li{font-size:13px;line-height:1.55;color:#5C6980}
-.letter-points b{display:block;font-size:13.5px;font-weight:700;color:var(--navy);letter-spacing:-.015em}
-.letter-link{margin-top:14px;font-size:13px;color:var(--muted)}
-.letter-link a{color:var(--blue);font-weight:600}
-.letter-free{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:2px;padding:24px 26px;background:var(--blue-soft);border-left:1px solid #CFE0FA}
-.letter-free .k{font-size:12.5px;font-weight:700;color:#2F4C7E;letter-spacing:-.01em}
-.letter-free .v{font-size:42px;font-weight:800;line-height:1.08;letter-spacing:-.05em;color:var(--blue-dark);font-feature-settings:"tnum"}
-.letter-free .n{font-size:12.5px;color:#5C6980;line-height:1.5}
+/* ---------- comparison table (pricing) ---------- */
 .cmp-col li .k em{font-style:normal;color:#7C879C;font-size:13.5px}
 .cmp-col li .free-tag{display:inline-block;margin-top:6px;font-size:11.5px;font-weight:700;color:#fff;background:var(--blue);border-radius:4px;padding:2px 7px;letter-spacing:.01em;line-height:1.5}
-@media (max-width:860px){
-  .letter{grid-template-columns:1fr}
-  .letter-main{padding:20px 20px 18px}
-  .letter-points{grid-template-columns:1fr;gap:6px}
-  .letter-free{border-left:0;border-top:1px solid #CFE0FA;flex-direction:row;flex-wrap:wrap;align-items:baseline;justify-content:flex-start;text-align:left;gap:2px 12px;padding:16px 20px}
-  .letter-free .v{font-size:32px}
-}
 
 /* ---------- faq ---------- */
 .faq{border-top:1px solid #CBD6E6}
@@ -512,13 +490,6 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
 .vid-item{grid-template-columns:100px minmax(0,1fr);gap:11px;padding:7px}
 .vid-body b{font-size:13.6px}
 .vid-note{margin-top:14px;font-size:13px}
-.letter{margin-bottom:14px}
-.letter-main{padding:18px 20px}
-.letter-def{margin-top:8px;font-size:15.5px;line-height:1.7}
-.letter-points{margin-top:12px;padding-top:10px}
-.letter-link{margin-top:10px}
-.letter-free{padding:18px 20px}
-.letter-free .v{font-size:34px}
 .cmp-col header{padding:14px 18px}
 .cmp-col ul{padding:4px 18px 10px}
 .cmp-col li{padding:9px 0;font-size:14.5px}
@@ -593,11 +564,6 @@ body{font-size:16px}
   .maker{margin-top:18px;padding-top:18px;gap:16px}
   .maker-photo{max-width:300px}
   .maker-copy p{font-size:14.4px;line-height:1.7}
-  .letter-main{padding:16px 16px}
-  .letter-def{font-size:14.6px;line-height:1.65}
-  .letter-points{grid-template-columns:1fr;gap:6px;margin-top:10px;padding-top:9px}
-  .letter-free{padding:14px 16px}
-  .letter-free .v{font-size:28px}
   .cmp{gap:12px}
   .cmp-col header{padding:11px 14px}
   .cmp-col ul{padding:2px 14px 6px}
@@ -667,7 +633,6 @@ body{font-size:16px}
   .maker{margin-top:16px;padding-top:16px}
   .maker h3{font-size:19px}
   .maker-copy p{font-size:13.8px;line-height:1.66;margin-top:9px}
-  .letter-main{padding:14px}
   .cmp-col li{padding:6px 0}
   .assure li{padding:9px 10px}
   .faq summary{padding:12px 0;font-size:14.8px}
@@ -681,9 +646,6 @@ body{font-size:16px}
 }
 
 /* narrow figure (letter) */
-.feat--narrow .feat-fig{max-width:320px;width:100%;justify-self:center}
-.feat--narrow .fig-45{max-width:100%}
-@media (max-width:760px){.feat--narrow .feat-fig{max-width:250px}}
 
 @media (max-width:760px){
   .feat figcaption{display:none}
@@ -756,6 +718,56 @@ body{font-size:16px}
   .feat p.desc{margin-top:11px;line-height:1.74}
   .rev h3{line-height:1.46}
   .rev-body{line-height:1.7}
+}
+
+/* ================= v7: 01 손실 카드 글씨 확대 ================= */
+.punch{gap:16px}
+.punch li{padding:24px 26px}
+.punch b{font-size:19.5px;line-height:1.5;letter-spacing:-.032em;font-weight:700}
+.punch span{margin-top:12px;padding-top:12px;font-size:16.5px;line-height:1.55;color:#5A6579}
+@media (max-width:760px){
+  .punch li{padding:19px 18px}
+  .punch b{font-size:17.5px;line-height:1.5}
+  .punch span{margin-top:10px;padding-top:10px;font-size:15.2px;color:#5A6579}
+}
+
+/* ================= v7: 레터 실제 화면(폰 프레임) ================= */
+.letter-fig{max-width:334px;width:100%;justify-self:center;margin:0}
+.letter-fig .phone{display:block;border:7px solid #0F2557;border-radius:26px;background:#0F2557;overflow:hidden;box-shadow:0 24px 52px -32px rgba(16,29,56,.6),0 2px 6px rgba(16,29,56,.08);transition:transform .18s ease,box-shadow .18s ease}
+.letter-fig .phone:hover{transform:translateY(-2px);box-shadow:0 30px 60px -32px rgba(16,29,56,.66)}
+.letter-fig .phone img{display:block;width:100%;height:auto;border-radius:19px}
+.letter-fig figcaption{margin-top:12px}
+@media (max-width:1120px){
+  .letter-fig{max-width:320px}
+}
+@media (min-width:1121px){
+  .letter-fig{justify-self:end}
+}
+@media (max-width:760px){
+  .letter-fig{max-width:296px;margin:2px auto 0}
+  .letter-fig .phone{border-width:6px;border-radius:22px}
+  .letter-fig .phone img{border-radius:16px}
+}
+
+/* ================= v7: 회원 지도 카드(실제 지도 이미지 + 클릭 연결) ================= */
+.map-card{display:block;max-width:900px;margin:22px auto 0;padding:0;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:border-color .16s,box-shadow .16s}
+.map-card:hover{border-color:#B9CCE6;box-shadow:0 20px 44px -34px rgba(16,29,56,.5)}
+.map-head{display:flex;align-items:center;gap:14px 24px;padding:18px 22px;flex-wrap:wrap}
+.map-txt{flex:1;min-width:240px}
+.map-card .map-k{margin:0;font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--blue);text-transform:uppercase}
+.map-card .map-txt b{display:block;margin-top:5px;font-size:17.5px;line-height:1.45;letter-spacing:-.028em;color:var(--navy);font-weight:700}
+.map-card .map-d{display:block;margin-top:3px;font-size:13.8px;line-height:1.6;color:#6B778D}
+.map-go{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;height:44px;padding:0 18px;border-radius:8px;background:var(--blue);color:#fff;font-size:14.5px;font-weight:600;letter-spacing:-.01em;transition:background .15s}
+.map-go svg{width:16px;height:16px}
+.map-card:hover .map-go{background:var(--blue-dark)}
+.map-shot{display:block;border-top:1px solid var(--line-2);background:#DCE9F7}
+.map-shot img{display:block;width:100%;height:auto}
+@media (max-width:760px){
+  .map-head{padding:16px 16px;gap:12px}
+  .map-card .map-txt b{font-size:16.5px}
+  .map-card .map-d{font-size:13.2px}
+  .map-go{width:100%;justify-content:center}
+  .map-card{max-width:none;margin-top:16px}
 }
 </style>
 </head>
@@ -858,12 +870,12 @@ body{font-size:16px}
     </header>
 
     <ul class="punch">
-      <li><b>상담까지 하고도 연락처는 수첩·엑셀에 흩어집니다.</b><span>다시 연락할 손님이 없습니다.</span></li>
-      <li><b>만기 3개월 전, 바쁘면 그냥 지나갑니다.</b><span>재계약 상담을 그대로 흘려보냅니다.</span></li>
-      <li><b>홈페이지 견적은 수백만 원, 몇 달씩 미룹니다.</b><span>그사이 옆 사무소가 먼저 보냅니다.</span></li>
+      <li><b>상담 다녀간 손님도 바쁘다 보면 금방 잊어먹습니다.</b><span>다시 연락할 타이밍을 놓칩니다.</span></li>
+      <li><b>만기 전·계약 일정을 문자로만 소통하려니 답답합니다.</b><span>사무소 정보도 안 보이고, 손님은 금방 묻힙니다.</span></li>
+      <li><b>나만의 홈페이지가 필요해도 너무 비싸서 못 만듭니다.</b><span>수백만 원 견적 때문에 몇 달씩 미룹니다.</span></li>
     </ul>
 
-    <p class="why-foot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>세 가지 모두, 계약서 한 장을 등록하는 데서 막힙니다.</p>
+    <p class="why-foot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>이 세 가지 모두, 중개톡에 계약서 한 장만 등록하면 한 번에 해결됩니다.</p>
   </div>
 </section>
 
@@ -926,21 +938,23 @@ body{font-size:16px}
       </figure>
     </article>
 
-    <article class="feat feat--flip feat--narrow">
+    <article class="feat feat--flip feat--letter">
       <div class="feat-copy">
         <p class="feat-no">04 <span>중개톡 레터 — 회원에게 무료 배포</span></p>
         <h3>중개톡 회원이면, 내 사무소 모바일 홈페이지가 무료로 생깁니다.</h3>
-        <p class="desc">우리 동네 실거래가와 내 매물을 담은 <b>중개사 전용 모바일 홈페이지</b>. 링크 하나로 보내면 고객은 앱 설치 없이 바로 열어 봅니다.</p>
+        <p class="desc">그 홈페이지가 <b>중개톡 레터</b>입니다. 우리 동네 아파트 <b>실거래가</b>와 <b>부동산 칼럼</b>, <b>내 사무소 매물</b>을 한 페이지에 담아, 고객에게 링크 하나로 바로 보냅니다. 고객은 앱 설치 없이 열어 보고, 매주 새 레터가 알림톡으로 자동 발송됩니다.</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>우리 동네 아파트 실거래가 자동 정리</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>부동산 칼럼·지역 소식까지 한 페이지에</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>우리 동네 아파트 실거래가·아파트값 그래프 자동 정리</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>지역 소식·부동산 칼럼까지 한 페이지에</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>내 사무소 매물을 링크 하나로 발송</li>
         </ul>
         <p class="feat-free"><b>중개톡 회원에게 무료 배포</b> 모바일 홈페이지 제작비 0원</p>
       </div>
-      <figure class="feat-fig">
-        <div class="fig-frame fig-45"><img src="assets/screen-letter.png" alt="중개톡 레터 실제 화면 — 동네 최근 실거래 매매·전세 가격이 정리된 중개사 전용 모바일 홈페이지" loading="lazy"></div>
-        <figcaption><b>실제 레터 화면</b> 동네 최근 실거래<span class="src">중개톡 레터</span></figcaption>
+      <figure class="feat-fig letter-fig">
+        <a class="phone" href="https://joonggaetalk.co.kr" target="_blank" rel="noopener noreferrer" aria-label="중개톡 레터 실제 화면 크게 보기 (새 창)">
+          <img src="assets/screen-letter.png" width="1170" height="3102" alt="중개톡 레터 실제 화면 — 이번 주 우리 동네 아파트값 변동률 그래프와 최근 실거래 목록이 정리된 중개사 전용 모바일 홈페이지" loading="lazy">
+        </a>
+        <figcaption><b>실제 레터 화면</b> 우리 동네 아파트값·최근 실거래<span class="src">중개톡 레터</span></figcaption>
       </figure>
     </article>
   </div>
@@ -1056,14 +1070,21 @@ body{font-size:16px}
       </article>
     </div>
 
-    <div class="map-card">
-      <div>
-        <p class="map-k">중개톡 회원 지도</p>
-        <b>전국에서 중개톡을 쓰는 사무소를 지도에서 한눈에.</b>
-        <p>우리 동네 중개톡 회원이 어디에 있는지 바로 확인하실 수 있습니다.</p>
+    <a class="map-card" href="https://joonggaetalk.co.kr/members" target="_blank" rel="noopener noreferrer">
+      <div class="map-head">
+        <div class="map-txt">
+          <p class="map-k">중개톡 회원 지도</p>
+          <b>전국에서 중개톡을 쓰는 사무소를 지도에서 한눈에.</b>
+          <span class="map-d">우리 동네 중개톡 회원이 어디에 있는지 지도에서 바로 확인하실 수 있습니다.</span>
+        </div>
+        <span class="map-go">회원 지도 열기
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
       </div>
-      <a class="btn btn-blue" href="https://joonggaetalk.co.kr/members" target="_blank" rel="noopener">회원 지도 열기 ↗</a>
-    </div>
+      <div class="map-shot">
+        <img src="assets/member-map.jpg" width="1712" height="1109" alt="전국의 중개톡 회원 중개사무소가 표시된 회원 지도 화면 — 지도를 누르면 회원 지도로 이동합니다." loading="lazy">
+      </div>
+    </a>
 
     <div class="maker">
       <figure class="maker-photo">
@@ -1086,28 +1107,10 @@ body{font-size:16px}
     <header class="sec-head">
       <p class="sec-idx"><b>05</b>요금·무료 혜택</p>
       <div>
-        <h2>중개톡 회원에게는<br><em>모바일 홈페이지</em>를 무료로 드립니다.</h2>
-        <p class="sec-sub">그 홈페이지가 바로 <b>중개톡 레터</b>입니다.<br>중개톡 회원에게는 <b>중개사 전용 모바일 홈페이지</b>를 무료로 배포합니다.</p>
+        <h2>홈페이지 제작비 <em>0원</em>,<br>의무 약정 없이 시작합니다.</h2>
+        <p class="sec-sub">중개톡 회원에게는 <b>중개톡 레터(모바일 홈페이지)</b>를 무료로 배포합니다.<br>따로따로 쓰면 홈페이지 제작비만 200~500만 원, 중개톡은 회원 혜택으로 0원입니다.</p>
       </div>
     </header>
-
-    <div class="letter">
-      <div class="letter-main">
-        <p class="letter-q">중개톡 레터란?</p>
-        <p class="letter-def">우리 동네 아파트 <b>실거래가</b>와 <b>부동산 칼럼</b>, <b>내 사무소 매물</b>을 한곳에 담아 <b>고객에게 링크 하나로</b> 바로 보낼 수 있는 <b>중개사 전용 모바일 홈페이지</b>입니다.</p>
-        <ul class="letter-points">
-          <li><b>실거래가</b>우리 동네 아파트 시세 자동 정리</li>
-          <li><b>부동산 칼럼</b>지역 소식·부동산 칼럼</li>
-          <li><b>내 매물</b>사무소 매물을 한 페이지에</li>
-        </ul>
-        <p class="letter-link"><a href="https://joonggaetalk.co.kr" target="_blank" rel="noopener">중개톡 레터 실제 화면 보기 ↗</a></p>
-      </div>
-      <div class="letter-free">
-        <p class="k">중개톡 회원에게</p>
-        <p class="v">0원</p>
-        <p class="n">모바일 홈페이지 무료 배포</p>
-      </div>
-    </div>
 
     <div class="cmp">
       <div class="cmp-col is-old">
