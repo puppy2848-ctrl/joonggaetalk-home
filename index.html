@@ -720,6 +720,15 @@ body{font-size:16px}
   .rev-body{line-height:1.7}
 }
 
+/* ================= v7: 영상 섹션을 히어로 바로 아래로 ================= */
+.sec--video{padding-top:34px;padding-bottom:46px}
+.sec--video .sec-head{margin-bottom:22px}
+.sec--video .sec-idx{color:var(--blue)}
+#reviews{border-top:0}
+@media (max-width:760px){
+  .sec--video{padding-top:24px;padding-bottom:32px}
+}
+
 /* ================= v7: 01 손실 카드 글씨 확대 ================= */
 .punch{gap:16px}
 .punch li{padding:24px 26px}
@@ -782,9 +791,9 @@ body{font-size:16px}
     </a>
     <nav class="nav" id="nav" aria-label="주요 메뉴">
       <a href="#about">중개톡이란</a>
+      <a href="#video">사용 영상</a>
       <a href="#why">왜 써야 하나</a>
       <a href="#features">핵심 기능</a>
-      <a href="#video">사용 영상</a>
       <a href="#reviews">후기</a>
       <a href="#pricing">요금·혜택</a>
       <a href="#faq">자주 묻는 질문</a>
@@ -810,9 +819,9 @@ body{font-size:16px}
         <p class="eyebrow">공인중개사 전용 고객관리(CRM) · 자동 알림톡 · 무료 홈페이지</p>
         <h1>신규 광고비만 쏟고,<br><em>기존 고객</em>은 다 놓치시나요?</h1>
         <p class="hero-lead">
-          <span>사무실 핸드폰에 저장된 고객만 수천 명인데, 정작 그분들을 관리할 방법이 없으셨죠.</span>
-          <span>신규 손님 모으려 광고비는 쏟으면서, 이미 만난 내 고객은 방치하기 쉽습니다.</span>
-          <span><b>만기 알림톡, 등기부 변동 감시, 동호수 배치도, 무료 모바일 홈페이지</b>까지</span>
+          <span>사무실 핸드폰에 저장된 고객만 수천 명인데, 정작 관리할 방법이 없으셨죠.</span>
+          <span>중개톡은 <b>계약·만기 일정에 맞춰 모든 고객을 자동으로 관리</b>하고,</span>
+          <span><b>나머지 고객에게도 시세·안부·레터 알림톡을 꾸준히 보내</b> 잊히지 않게 합니다.</span>
           <span>18년 차 현업 공인중개사가 실무에 꼭 필요한 기능만 담아 직접 만들고 매일 쓰는 프로그램입니다.</span>
         </p>
         <div class="cta-row">
@@ -853,8 +862,67 @@ body{font-size:16px}
     </ul>
     <dl class="def">
       <dt>중개톡이란</dt>
-      <dd>공인중개사무소의 고객·물건·계약을 한 곳에 모으고, 일반 문자 대신 <b>카카오톡 채널 알림톡</b>으로 만기 안내·등기 확인·모바일 홈페이지까지 자동으로 보내 관리하는 부동산 중개 전용 프로그램입니다. <span>수동으로 보내고 중개사무소 정보도 보이지 않는 일반 문자와 달리, 공식 카카오톡 채널로 발송되어 고객에게 높은 신뢰도를 줍니다.</span></dd>
+      <dd>공인중개사무소의 고객·물건·계약을 한 곳에 모으고, <b>계약·만기 일정에 맞춰 고객을 자동으로 챙기며</b>, 나머지 고객에게는 시세·안부·레터를 <b>카카오톡 채널 알림톡</b>으로 꾸준히 보내는 부동산 중개 전용 프로그램입니다. <span>수동으로 보내고 중개사무소 정보도 보이지 않는 일반 문자와 달리, 공식 카카오톡 채널로 발송되어 고객에게 높은 신뢰도를 줍니다.</span></dd>
     </dl>
+  </div>
+</section>
+<!-- ================= VIDEO (바로 아래) ================= -->
+<section class="sec sec--mist sec--video" id="video">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="sec-idx">먼저 영상으로</p>
+      <div>
+        <h2>중개톡이 뭔지,<br>영상 한 번이면 끝납니다.</h2>
+        <p class="sec-sub">일정에 맞춰 고객을 챙기고, 나머지 고객에게 알림톡을 보내는 과정을 실제 화면으로 보여 드립니다.<br>바로 재생해 보세요.</p>
+      </div>
+    </header>
+
+    <div class="video-grid">
+      <div class="player">
+        <div class="yt" id="ytBox">
+          <button type="button" class="yt-facade" id="ytPlay" aria-label="영상 재생 — 중개톡이 어떤건가요? 신세계를 열어드립니다 (5분 56초)">
+            <img src="assets/big-nLCR1nvcs2c.jpg" alt="" width="1280" height="720">
+            <span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="yt-cap"><b>나는 중개사</b> 유튜브에서 재생 · 5:56</span>
+          </button>
+          <noscript><style>.yt-facade{display:none}</style><iframe src="https://www.youtube-nocookie.com/embed/nLCR1nvcs2c?rel=0" title="중개톡이 어떤건가요? 신세계를 열어드립니다 — 나는 중개사" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></noscript>
+        </div>
+        <div class="player-meta">
+          <h3 id="ytTitle">중개톡이 어떤건가요? 신세계를 열어드립니다</h3>
+          <p id="ytMeta"><span>5:56</span><span>나는 중개사</span><a href="https://youtu.be/nLCR1nvcs2c" target="_blank" rel="noopener">유튜브에서 보기 ↗</a></p>
+        </div>
+      </div>
+      <ul class="vid-list">
+        <li>
+          <button type="button" class="vid-item is-active" data-id="nLCR1nvcs2c" data-title="중개톡이 어떤건가요? 신세계를 열어드립니다" data-len="5:56" data-ch="나는 중개사" aria-pressed="true">
+            <span class="vid-thumb"><img src="assets/video-nLCR1nvcs2c.jpg" alt="" loading="lazy"><em>5:56</em></span>
+            <span class="vid-body"><b>중개톡이 어떤건가요? 신세계를 열어드립니다</b><span>중개톡을 처음 보시는 분께 먼저 보여 드리는 소개 영상</span></span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="vid-item" data-id="fC9RkpuLr80" data-ch="중개톡 공식 채널" data-title="고객과 약속 생기면? 자동으로 알림톡!" data-len="7:13" aria-pressed="false">
+            <span class="vid-thumb"><img src="assets/video-fC9RkpuLr80.jpg" alt="" loading="lazy"><em>7:13</em></span>
+            <span class="vid-body"><b>고객과 약속 생기면? 자동으로 알림톡!</b><span>약속·만기를 등록하면 알림톡이 나가는 과정</span></span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="vid-item" data-id="BcqpU_3Wy14" data-ch="중개톡 공식 채널" data-title="카카오 채널로 수천명 고객을 관리하는 법" data-len="12:55" aria-pressed="false">
+            <span class="vid-thumb"><img src="assets/video-BcqpU_3Wy14.jpg" alt="" loading="lazy"><em>12:55</em></span>
+            <span class="vid-body"><b>카카오 채널로 수천명 고객을 관리하는 법</b><span>카톡 채널로 고객에게 소식을 보내는 방법</span></span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="vid-item" data-id="z6di9mNcPDk" data-ch="중개톡 공식 채널" data-title="우리동네 레터 무료로 배포합니다" data-len="5:43" aria-pressed="false">
+            <span class="vid-thumb"><img src="assets/video-z6di9mNcPDk.jpg" alt="" loading="lazy"><em>5:43</em></span>
+            <span class="vid-body"><b>우리동네 레터 무료로 배포합니다</b><span>우리 동네 레터를 무료로 배포하는 방법</span></span>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <p class="vid-note">
+      <span>영상이 더 궁금하시면 채널에 사용법이 순서대로 정리되어 있습니다.</span>
+      <a href="https://www.youtube.com/channel/UCbp1aDN5SC2X2H5JGPuLScw/videos" target="_blank" rel="noopener">@No.1_중개톡 채널 전체 영상 보기 ↗</a>
+    </p>
   </div>
 </section>
 
@@ -960,71 +1028,12 @@ body{font-size:16px}
   </div>
 </section>
 
-<!-- ================= VIDEO ================= -->
-<section class="sec" id="video">
-  <div class="wrap">
-    <header class="sec-head">
-      <p class="sec-idx"><b>03</b>영상 보기</p>
-      <div>
-        <h2>백 번 설명보다,<br>영상 한 번이 낫습니다.</h2>
-        <p class="sec-sub">공식 채널에 실제 사용 과정을 그대로 올려 두었습니다.<br>바로 재생해 보세요.</p>
-      </div>
-    </header>
-
-    <div class="video-grid">
-      <div class="player">
-        <div class="yt" id="ytBox">
-          <button type="button" class="yt-facade" id="ytPlay" aria-label="영상 재생 — 중개톡이 어떤건가요? 신세계를 열어드립니다 (5분 56초)">
-            <img src="assets/big-nLCR1nvcs2c.jpg" alt="" width="1280" height="720">
-            <span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-            <span class="yt-cap"><b>나는 중개사</b> 유튜브에서 재생 · 5:56</span>
-          </button>
-          <noscript><style>.yt-facade{display:none}</style><iframe src="https://www.youtube-nocookie.com/embed/nLCR1nvcs2c?rel=0" title="중개톡이 어떤건가요? 신세계를 열어드립니다 — 나는 중개사" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></noscript>
-        </div>
-        <div class="player-meta">
-          <h3 id="ytTitle">중개톡이 어떤건가요? 신세계를 열어드립니다</h3>
-          <p id="ytMeta"><span>5:56</span><span>나는 중개사</span><a href="https://youtu.be/nLCR1nvcs2c" target="_blank" rel="noopener">유튜브에서 보기 ↗</a></p>
-        </div>
-      </div>
-      <ul class="vid-list">
-        <li>
-          <button type="button" class="vid-item is-active" data-id="nLCR1nvcs2c" data-title="중개톡이 어떤건가요? 신세계를 열어드립니다" data-len="5:56" data-ch="나는 중개사" aria-pressed="true">
-            <span class="vid-thumb"><img src="assets/video-nLCR1nvcs2c.jpg" alt="" loading="lazy"><em>5:56</em></span>
-            <span class="vid-body"><b>중개톡이 어떤건가요? 신세계를 열어드립니다</b><span>중개톡을 처음 보시는 분께 먼저 보여 드리는 소개 영상</span></span>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="vid-item" data-id="fC9RkpuLr80" data-ch="중개톡 공식 채널" data-title="고객과 약속 생기면? 자동으로 알림톡!" data-len="7:13" aria-pressed="false">
-            <span class="vid-thumb"><img src="assets/video-fC9RkpuLr80.jpg" alt="" loading="lazy"><em>7:13</em></span>
-            <span class="vid-body"><b>고객과 약속 생기면? 자동으로 알림톡!</b><span>약속·만기를 등록하면 알림톡이 나가는 과정</span></span>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="vid-item" data-id="BcqpU_3Wy14" data-ch="중개톡 공식 채널" data-title="카카오 채널로 수천명 고객을 관리하는 법" data-len="12:55" aria-pressed="false">
-            <span class="vid-thumb"><img src="assets/video-BcqpU_3Wy14.jpg" alt="" loading="lazy"><em>12:55</em></span>
-            <span class="vid-body"><b>카카오 채널로 수천명 고객을 관리하는 법</b><span>카톡 채널로 고객에게 소식을 보내는 방법</span></span>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="vid-item" data-id="z6di9mNcPDk" data-ch="중개톡 공식 채널" data-title="우리동네 레터 무료로 배포합니다" data-len="5:43" aria-pressed="false">
-            <span class="vid-thumb"><img src="assets/video-z6di9mNcPDk.jpg" alt="" loading="lazy"><em>5:43</em></span>
-            <span class="vid-body"><b>우리동네 레터 무료로 배포합니다</b><span>우리 동네 레터를 무료로 배포하는 방법</span></span>
-          </button>
-        </li>
-      </ul>
-    </div>
-    <p class="vid-note">
-      <span>영상이 더 궁금하시면 채널에 사용법이 순서대로 정리되어 있습니다.</span>
-      <a href="https://www.youtube.com/channel/UCbp1aDN5SC2X2H5JGPuLScw/videos" target="_blank" rel="noopener">@No.1_중개톡 채널 전체 영상 보기 ↗</a>
-    </p>
-  </div>
-</section>
 
 <!-- ================= TRUST: reviews + member map + maker ================= -->
 <section class="sec sec--mist" id="reviews">
   <div class="wrap">
     <header class="sec-head">
-      <p class="sec-idx"><b>04</b>현장 후기·회원 지도</p>
+      <p class="sec-idx"><b>03</b>현장 후기·회원 지도</p>
       <div>
         <h2>현장에서 쓰고 계신 분들이<br>먼저 말합니다.</h2>
         <p class="sec-sub">중개톡을 쓰고 달라진 점을 직접 남겨 주셨습니다.<br>전국에서 쓰는 사무소는 회원 지도에서 확인하실 수 있습니다.</p>
@@ -1105,7 +1114,7 @@ body{font-size:16px}
 <section class="sec" id="pricing">
   <div class="wrap">
     <header class="sec-head">
-      <p class="sec-idx"><b>05</b>요금·무료 혜택</p>
+      <p class="sec-idx"><b>04</b>요금·무료 혜택</p>
       <div>
         <h2>홈페이지 제작비 <em>0원</em>,<br>의무 약정 없이 시작합니다.</h2>
         <p class="sec-sub">중개톡 회원에게는 <b>중개톡 레터(모바일 홈페이지)</b>를 무료로 배포합니다.<br>따로따로 쓰면 홈페이지 제작비만 200~500만 원, 중개톡은 회원 혜택으로 0원입니다.</p>
@@ -1164,7 +1173,7 @@ body{font-size:16px}
 <section class="sec sec--mist" id="faq">
   <div class="wrap">
     <header class="sec-head">
-      <p class="sec-idx"><b>06</b>자주 묻는 질문</p>
+      <p class="sec-idx"><b>05</b>자주 묻는 질문</p>
       <div>
         <h2>시작하기 전에<br>가장 많이 물으시는 것들.</h2>
         <p class="sec-sub">결제·가입 직전에 망설여지는 부분만 모았습니다. 더 궁금한 점은 카톡 채팅으로 바로 물어보세요.</p>
@@ -1247,8 +1256,8 @@ body{font-size:16px}
       <div>
         <h4>바로가기</h4>
         <ul>
-          <li><a href="#features">핵심 기능</a></li>
           <li><a href="#video">사용 영상</a></li>
+          <li><a href="#features">핵심 기능</a></li>
           <li><a href="#reviews">현장 후기</a></li>
           <li><a href="#pricing">요금·무료 혜택</a></li>
           <li><a href="#faq">자주 묻는 질문</a></li>
