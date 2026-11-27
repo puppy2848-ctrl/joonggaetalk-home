@@ -162,6 +162,7 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
 .sec-idx{font-size:12.5px;font-weight:600;color:var(--blue);letter-spacing:.1em;line-height:1.6;padding-top:8px;text-transform:uppercase}
 .sec-idx b{display:block;font:700 13px/1 var(--mono);letter-spacing:.04em;color:#9FB0C9;margin-bottom:6px}
 .sec-head h2{color:var(--navy);font-size:clamp(27px,3vw,39px);line-height:1.34;letter-spacing:-.032em;font-weight:700}
+.sec-head h2 em{font-style:normal;color:var(--blue)}
 .sec-sub{margin-top:16px;font-size:16.5px;line-height:1.75;color:#55627B;max-width:720px}
 .sec-sub b{color:var(--ink);font-weight:600}
 .sec-sub a{color:var(--blue);font-weight:600;border-bottom:1px solid #BFD5F7}
@@ -189,6 +190,9 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
 .feat-no::after{content:"";height:1px;width:34px;background:#C9D8EE}
 .feat h3{margin-top:14px;font-size:clamp(23px,2.2vw,29px);line-height:1.4;letter-spacing:-.032em;color:var(--navy);font-weight:700}
 .feat p.desc{margin-top:14px;font-size:16px;line-height:1.75;color:#4C5871}
+.feat p.desc b{color:var(--navy);font-weight:700}
+.feat-free{margin-top:18px;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px;padding:12px 14px;background:var(--blue-soft);border:1px solid #CFE0FA;border-radius:8px;font-size:13.5px;line-height:1.6;color:#33405C}
+.feat-free b{font-size:15px;font-weight:700;color:var(--navy);letter-spacing:-.025em}
 .feat ul{margin-top:20px;display:grid;gap:9px}
 .feat ul li{display:flex;gap:9px;font-size:15.5px;line-height:1.6;color:#33405C;align-items:flex-start}
 .feat ul li svg{width:17px;height:17px;flex:0 0 auto;margin-top:3px;color:var(--blue)}
@@ -284,6 +288,32 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
 .assure{margin-top:34px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}
 .assure li{background:#fff;padding:16px 18px;font-size:14px;color:#33405C}
 .assure b{display:block;font-size:14.5px;color:var(--navy);font-weight:700;margin-bottom:3px;letter-spacing:-.02em}
+
+/* ---------- letter card (pricing) ---------- */
+.letter{display:grid;grid-template-columns:minmax(0,1fr) 320px;border:1px solid #CFE0FA;border-radius:10px;background:#fff;overflow:hidden;margin-bottom:20px}
+.letter-main{padding:24px 26px}
+.letter-q{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;color:var(--blue);letter-spacing:.06em}
+.letter-q::before{content:"";width:7px;height:7px;background:var(--blue);border-radius:1px}
+.letter-def{margin-top:10px;font-size:16.5px;line-height:1.74;color:#2A3752;letter-spacing:-.022em}
+.letter-def b{color:var(--navy);font-weight:700}
+.letter-points{margin-top:16px;padding-top:14px;border-top:1px solid var(--line-2);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 16px}
+.letter-points li{font-size:13px;line-height:1.55;color:#5C6980}
+.letter-points b{display:block;font-size:13.5px;font-weight:700;color:var(--navy);letter-spacing:-.015em}
+.letter-link{margin-top:14px;font-size:13px;color:var(--muted)}
+.letter-link a{color:var(--blue);font-weight:600}
+.letter-free{display:flex;flex-direction:column;justify-content:center;gap:2px;padding:24px 26px;background:var(--blue-soft);border-left:1px solid #CFE0FA}
+.letter-free .k{font-size:12.5px;font-weight:700;color:#2F4C7E;letter-spacing:-.01em}
+.letter-free .v{font-size:42px;font-weight:800;line-height:1.08;letter-spacing:-.05em;color:var(--blue-dark);font-feature-settings:"tnum"}
+.letter-free .n{font-size:12.5px;color:#5C6980;line-height:1.5}
+.cmp-col li .k em{font-style:normal;color:#7C879C;font-size:13.5px}
+.cmp-col li .free-tag{display:inline-block;margin-top:6px;font-size:11.5px;font-weight:700;color:#fff;background:var(--blue);border-radius:4px;padding:2px 7px;letter-spacing:.01em;line-height:1.5}
+@media (max-width:860px){
+  .letter{grid-template-columns:1fr}
+  .letter-main{padding:20px 20px 18px}
+  .letter-points{grid-template-columns:1fr;gap:6px}
+  .letter-free{border-left:0;border-top:1px solid #CFE0FA;flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:2px 12px;padding:16px 20px}
+  .letter-free .v{font-size:32px}
+}
 
 /* ---------- faq ---------- */
 .faq{border-top:1px solid #CBD6E6}
@@ -531,7 +561,7 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
       <div class="why-row">
         <div class="c c-t" data-l="현장"><p>사무소 홈페이지를 만들려면 견적부터 수십~수백만 원입니다.</p></div>
         <div class="c c-loss" data-l="잃는 것"><p>견적만 받고 몇 달씩 미루게 됩니다.</p></div>
-        <div class="c c-sol" data-l="중개톡"><p>중개톡 레터로 <b>모바일 홈페이지가 0원</b>, 실거래가와 내 매물이 자동으로 채워집니다.</p></div>
+        <div class="c c-sol" data-l="중개톡"><p>중개톡 회원에게는 <b>레터 모바일 홈페이지가 0원</b>, 실거래가와 내 매물이 자동으로 채워집니다.</p></div>
       </div>
     </div>
 
@@ -606,14 +636,15 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
 
     <article class="feat feat--flip">
       <div class="feat-copy">
-        <p class="feat-no">04 <span>중개톡 레터 — 모바일 홈페이지 0원</span></p>
-        <h3>세팅만 하면, 내 사무소 홈페이지가 생깁니다.</h3>
-        <p class="desc">우리 단지 실거래가와 내 매물, 지역 소식이 자동으로 채워지는 모바일 홈페이지. 링크 하나로 카톡·문자에 붙여 보내면 고객은 앱 설치 없이 바로 열어 봅니다. 홈페이지 외주 제작비는 들지 않습니다.</p>
+        <p class="feat-no">04 <span>중개톡 레터 — 회원에게 무료 배포</span></p>
+        <h3>중개톡 회원이면, 내 사무소 모바일 홈페이지가 무료로 생깁니다.</h3>
+        <p class="desc">중개톡 레터는 우리 동네 아파트 실거래가와 부동산 칼럼, 내 사무소 매물을 한곳에 담은 <b>중개사 전용 모바일 홈페이지</b>입니다. 링크 하나로 카톡·문자에 붙여 보내면 고객은 앱 설치 없이 바로 열어 보고, 중개톡 회원에게는 이 홈페이지를 무료로 배포합니다.</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>우리 동네 실거래가 자동 정리</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>내 매물·지역 소식을 한 페이지에</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>링크 하나로 카톡·문자 발송</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>우리 동네 아파트 실거래가 자동 정리</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>부동산 칼럼·지역 소식까지 한 페이지에</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>내 사무소 매물을 링크 하나로 발송</li>
         </ul>
+        <p class="feat-free"><b>중개톡 회원에게 무료 배포</b> 모바일 홈페이지 제작비 0원</p>
       </div>
       <figure class="feat-fig">
         <div class="fig-frame fig-45"><img src="assets/screen-letter.png" alt="중개톡 레터 실제 화면 — 우리 동네 실거래와 이번 주 소식이 담긴 모바일 홈페이지" loading="lazy"></div>
@@ -709,10 +740,28 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
     <header class="sec-head">
       <p class="sec-idx"><b>05</b>요금·무료 혜택</p>
       <div>
-        <h2>홈페이지·알림톡, 따로 쓰면 비쌉니다.</h2>
-        <p class="sec-sub">홈페이지는 외주로, 안부 문자는 매달 손으로, 등기 확인은 유료 열람으로. 중개톡은 이 셋을 한 곳에 모으고, 홈페이지 제작비를 0원으로 만듭니다.</p>
+        <h2>중개톡 회원에게는<br><em>모바일 홈페이지</em>를 무료로 드립니다.</h2>
+        <p class="sec-sub">그 홈페이지가 바로 <b>중개톡 레터</b>입니다. 우리 동네 아파트 실거래가·부동산 칼럼·내 사무소 매물을 한곳에 담아 고객에게 링크 하나로 바로 보낼 수 있는 <b>중개사 전용 모바일 홈페이지</b>를, 중개톡 회원에게는 무료로 배포합니다.</p>
       </div>
     </header>
+
+    <div class="letter">
+      <div class="letter-main">
+        <p class="letter-q">중개톡 레터란?</p>
+        <p class="letter-def">우리 동네 아파트 <b>실거래가</b>와 <b>부동산 칼럼</b>, <b>내 사무소 매물</b>을 한곳에 담아 <b>고객에게 링크 하나로</b> 바로 보낼 수 있는 <b>중개사 전용 모바일 홈페이지</b>입니다.</p>
+        <ul class="letter-points">
+          <li><b>실거래가</b>우리 동네 아파트 시세 자동 정리</li>
+          <li><b>부동산 칼럼</b>지역 소식·부동산 칼럼</li>
+          <li><b>내 매물</b>사무소 매물을 한 페이지에</li>
+        </ul>
+        <p class="letter-link"><a href="https://joonggaetalk.co.kr" target="_blank" rel="noopener">중개톡 레터 실제 화면 보기 ↗</a></p>
+      </div>
+      <div class="letter-free">
+        <p class="k">중개톡 회원에게</p>
+        <p class="v">0원</p>
+        <p class="n">모바일 홈페이지 무료 배포</p>
+      </div>
+    </div>
 
     <div class="cmp">
       <div class="cmp-col is-old">
@@ -732,13 +781,13 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
       <div class="cmp-col is-now">
         <header><h3>중개톡으로 한 번에</h3><span class="tag">추천</span></header>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="k">중개톡 레터 (모바일 홈페이지)</span><span class="v">0원</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="k">중개톡 레터 <em>(모바일 홈페이지)</em><br><span class="free-tag">중개톡 회원 무료 배포</span></span><span class="v">0원</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="k">만기·명절 안부</span><span class="v">자동 알림톡</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="k">등기부 변동 확인</span><span class="v">실시간 감시</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="k">물건·고객 관리</span><span class="v">한 화면 통합</span></li>
         </ul>
         <div class="cmp-price">
-          <p class="lbl">홈페이지 제작비</p>
+          <p class="lbl">중개톡 회원 · 모바일 홈페이지 제작비</p>
           <p class="val">0원</p>
         </div>
       </div>
@@ -748,10 +797,10 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
       <span class="k">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>SAVE
       </span>
-      <p>홈페이지 외주 견적 최대 <b>500만 원</b>, 이제 내지 마세요. 그 돈이면 계약 한 건을 더 만드는 게 낫습니다.</p>
+      <p>중개톡 레터 모바일 홈페이지, 회원이면 <b>제작비 0원</b>. 홈페이지 외주 견적 최대 <b>500만 원</b>, 이제 내지 마세요.</p>
       <a class="btn btn-blue" href="https://app.joonggaetalk.com">제작비 0원으로 시작</a>
     </div>
-    <p class="pay-note">* 홈페이지 제작비는 외주 제작 일반 견적 기준입니다. 프로그램 이용료와 알림톡 발송 단가는 카톡 채널로 문의해 주세요.</p>
+    <p class="pay-note">* 중개톡 레터(모바일 홈페이지)는 중개톡 회원에게 무료로 배포합니다. 200~500만 원은 외주 제작 일반 견적 기준이며, 프로그램 이용료와 알림톡 발송 단가는 카톡 채널로 문의해 주세요.</p>
 
     <ul class="assure">
       <li><b>의무 약정 없음</b>필요할 때 시작하고, 다음 결제 전에 해지하면 됩니다.</li>
@@ -797,7 +846,7 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
       <details>
         <summary><span class="q">Q4</span><span>중개톡 레터(모바일 홈페이지)는 별도 비용이 드나요?</span><span class="ic" aria-hidden="true"></span></summary>
         <div class="ans">
-          <p>아닙니다. 중개톡 레터는 제작비 0원입니다. 가입하시면 중개사님만의 모바일 홈페이지를 만들어 드리고, 우리 단지 실거래가와 내 매물이 자동으로 채워집니다.</p>
+          <p>아닙니다. 중개톡 레터는 우리 동네 아파트 실거래가와 부동산 칼럼, 내 매물이 담긴 <b>중개사 전용 모바일 홈페이지</b>로, 중개톡 회원에게 무료로 배포합니다. 가입하시면 중개사님만의 레터가 생기고, 실거래가와 내 매물이 자동으로 채워집니다.</p>
           <p>홈페이지 외주 제작비 200~500만 원을 따로 쓰지 않으셔도 됩니다.</p>
         </div>
       </details>
