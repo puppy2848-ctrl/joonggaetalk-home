@@ -717,6 +717,16 @@ body{font-size:16px}
   .final{padding:28px 0 80px}
   .ftr{padding:22px 0 16px}
 }
+
+/* hero lead blocks */
+.hero-lead{font-size:17px;line-height:1.72;max-width:560px}
+.hero-lead span{display:block}
+.hero-lead span+span{margin-top:9px}
+.hero-lead span:nth-child(3){color:var(--navy);font-weight:600}
+@media (max-width:760px){
+  .hero-lead{font-size:16px;line-height:1.72}
+  .hero-lead span+span{margin-top:8px}
+}
 </style>
 </head>
 <body>
@@ -757,7 +767,12 @@ body{font-size:16px}
       <div class="hero-copy">
         <p class="eyebrow">공인중개사 전용 고객관리(CRM) · 자동 알림톡 · 무료 홈페이지</p>
         <h1>신규 광고비만 쏟고,<br><em>기존 고객</em>은 다 놓치시나요?</h1>
-        <p class="hero-lead">사무실 핸드폰에 저장된 고객만 수천 명인데, 정작 그분들을 관리할 방법이 없으셨죠. 신규 손님 모으려 광고비는 쏟으면서, 이미 만난 내 고객은 방치하기 쉽습니다. <b>만기 알림톡, 등기부 변동 감시, 동호수 배치도, 무료 모바일 홈페이지</b>까지 — 18년 차 현업 공인중개사가 실무에 꼭 필요한 기능만 담아 직접 만들고 매일 쓰는 프로그램입니다.</p>
+        <p class="hero-lead">
+          <span>사무실 핸드폰에 저장된 고객만 수천 명인데, 정작 그분들을 관리할 방법이 없으셨죠.</span>
+          <span>신규 손님 모으려 광고비는 쏟으면서, 이미 만난 내 고객은 방치하기 쉽습니다.</span>
+          <span><b>만기 알림톡, 등기부 변동 감시, 동호수 배치도, 무료 모바일 홈페이지</b>까지</span>
+          <span>18년 차 현업 공인중개사가 실무에 꼭 필요한 기능만 담아 직접 만들고 매일 쓰는 프로그램입니다.</span>
+        </p>
         <div class="cta-row">
           <a class="btn btn-navy btn-lg" href="https://app.joonggaetalk.com">무료로 시작하기
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -894,8 +909,8 @@ body{font-size:16px}
         <p class="feat-free"><b>중개톡 회원에게 무료 배포</b> 모바일 홈페이지 제작비 0원</p>
       </div>
       <figure class="feat-fig">
-        <div class="fig-frame fig-45"><img src="assets/screen-letter.png" alt="중개톡 레터 실제 화면 — 우리 동네 실거래와 이번 주 소식이 담긴 모바일 홈페이지" loading="lazy"></div>
-        <figcaption><b>실제 레터 화면</b> 우리 동네 실거래 레터<span class="src">중개톡 레터</span></figcaption>
+        <div class="fig-frame fig-45"><img src="assets/screen-letter.png" alt="중개톡 레터 실제 화면 — 동네 최근 실거래 매매·전세 가격이 정리된 중개사 전용 모바일 홈페이지" loading="lazy"></div>
+        <figcaption><b>실제 레터 화면</b> 동네 최근 실거래<span class="src">중개톡 레터</span></figcaption>
       </figure>
     </article>
   </div>
