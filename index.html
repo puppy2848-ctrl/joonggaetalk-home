@@ -1243,11 +1243,14 @@ body{font-size:16px}
       <div class="rvb-top">
         <div>
           <p class="rvb-kicker">💬 실제 사용 후기 게시판</p>
-          <h3>쓰고 계신 중개사가 <em>별명으로 직접</em> 남깁니다.</h3>
+          <h3>중개사님의 <em>생생한 후기</em></h3>
           <p class="rvb-desc">실명 대신 편한 별명으로 쓰실 수 있습니다. 남겨 주신 후기는 이 자리에 바로 올라가고, 다른 중개사가 댓글로 이어서 답할 수 있습니다.</p>
         </div>
         <p class="rvb-stat">후기 <b id="rvb-count">0</b>개 · 댓글 <b id="rvb-ccount">0</b>개</p>
       </div>
+
+      <ul class="rvb-list" id="rvb-list" aria-live="polite"></ul>
+      <p class="rvb-empty" id="rvb-empty"><b>아직 등록된 후기가 없습니다.</b>첫 후기를 남겨 주세요.</p>
 
       <form class="rvb-form" id="rvb-form" novalidate>
         <div class="rvb-row">
@@ -1278,9 +1281,6 @@ body{font-size:16px}
         </div>
         <p class="rvb-msg" id="rvb-msg" role="status" aria-live="polite"></p>
       </form>
-
-      <ul class="rvb-list" id="rvb-list" aria-live="polite"></ul>
-      <p class="rvb-empty" id="rvb-empty"><b>아직 등록된 후기가 없습니다.</b>첫 후기를 남겨 주세요.</p>
     </div>
 
     <a class="map-card" href="https://joonggaetalk.co.kr/members" target="_blank" rel="noopener noreferrer">
@@ -1750,6 +1750,8 @@ body{font-size:16px}
         bodyInput.value='';
         say('후기가 등록되었습니다. 이 화면에 바로 보이고, 잠시 뒤 다른 방문자에게도 표시됩니다.','ok');
         render();
+        var mine=listEl.querySelector('.rvb-item[data-id="'+id+'"]');
+        if(mine) mine.scrollIntoView({behavior:'smooth',block:'center'});
       })
       .catch(function(){ say('등록에 실패했습니다. 잠시 후 다시 시도해 주세요.','err'); })
       .then(function(){ submitBtn.disabled=false; submitBtn.textContent=oldLabel; });
