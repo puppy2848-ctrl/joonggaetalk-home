@@ -1238,13 +1238,13 @@ body{font-size:16px}
       </article>
     </div>
 
-    <!-- 실제 사용 후기 게시판: 방문자가 별명으로 직접 작성 + 후기별 댓글 -->
+    <!-- 실제 사용 후기 게시판: 방문자가 닉네임으로 직접 작성 + 후기별 댓글 -->
     <div class="rvb" id="review-board">
       <div class="rvb-top">
         <div>
           <p class="rvb-kicker">💬 실제 사용 후기 게시판</p>
           <h3>중개사님의 <em>생생한 후기</em></h3>
-          <p class="rvb-desc">실명 대신 편한 별명으로 쓰실 수 있습니다. 남겨 주신 후기는 이 자리에 바로 올라가고, 다른 중개사가 댓글로 이어서 답할 수 있습니다.</p>
+          <p class="rvb-desc">실명 대신 편한 닉네임으로 쓰실 수 있습니다. 남겨 주신 후기는 이 자리에 바로 올라가고, 다른 중개사가 댓글로 이어서 답할 수 있습니다.</p>
         </div>
         <p class="rvb-stat">후기 <b id="rvb-count">0</b>개 · 댓글 <b id="rvb-ccount">0</b>개</p>
       </div>
@@ -1254,7 +1254,7 @@ body{font-size:16px}
 
       <form class="rvb-form" id="rvb-form" novalidate>
         <div class="rvb-row">
-          <label class="rvb-field" id="rvb-f-nick"><span>별명 <i>필수</i></span>
+          <label class="rvb-field" id="rvb-f-nick"><span>닉네임 <i>필수</i></span>
             <input type="text" name="nick" maxlength="20" placeholder="실명 대신 편한 닉네임, 예: 부평 15년차" autocomplete="off">
           </label>
           <label class="rvb-field"><span>지역 / 사무소 유형 <i>선택</i></span>
@@ -1609,8 +1609,8 @@ body{font-size:16px}
   }
   function commentForm(rid){
     var f=document.createElement('form'); f.className='rvb-cform'; f.setAttribute('data-rid',rid);
-    var nick=document.createElement('input'); nick.type='text'; nick.name='nick'; nick.maxLength=20; nick.placeholder='별명'; nick.value=savedNick(); nick.setAttribute('aria-label','댓글 별명');
-    var body=document.createElement('textarea'); body.name='body'; body.rows=1; body.maxLength=400; body.placeholder='댓글을 남겨 주세요 (별명으로 표시됩니다)'; body.setAttribute('aria-label','댓글 내용');
+    var nick=document.createElement('input'); nick.type='text'; nick.name='nick'; nick.maxLength=20; nick.placeholder='닉네임'; nick.value=savedNick(); nick.setAttribute('aria-label','댓글 닉네임');
+    var body=document.createElement('textarea'); body.name='body'; body.rows=1; body.maxLength=400; body.placeholder='댓글을 남겨 주세요 (닉네임으로 표시됩니다)'; body.setAttribute('aria-label','댓글 내용');
     var send=document.createElement('button'); send.type='submit'; send.className='rvb-csend'; send.textContent='댓글 등록';
     var msg=document.createElement('p'); msg.className='rvb-msg'; msg.setAttribute('role','status');
     f.appendChild(nick); f.appendChild(body); f.appendChild(send); f.appendChild(msg);
@@ -1693,7 +1693,7 @@ body{font-size:16px}
     }
   }
 
-  /* ---------- 별명 기억 ---------- */
+  /* ---------- 닉네임 기억 ---------- */
   function savedNick(){ try{ return localStorage.getItem(NICK_KEY)||''; }catch(e){ return ''; } }
   function saveNick(n){ try{ if(n) localStorage.setItem(NICK_KEY,n); }catch(e){} }
 
@@ -1730,7 +1730,7 @@ body{font-size:16px}
     e.preventDefault();
     var nick=(nickInput.value||'').trim(), region=(regionInput.value||'').trim(), body=(bodyInput.value||'').trim();
     markBad('#rvb-f-nick',false); markBad('#rvb-f-body',false);
-    if(!nick){ markBad('#rvb-f-nick',true); say('별명을 적어 주세요. 실명 대신 편한 닉네임이면 됩니다.','err'); nickInput.focus(); return; }
+    if(!nick){ markBad('#rvb-f-nick',true); say('닉네임을 적어 주세요. 실명 대신 편한 이름이면 됩니다.','err'); nickInput.focus(); return; }
     if(body.length<5){ markBad('#rvb-f-body',true); say('후기 내용을 5자 이상 적어 주세요.','err'); bodyInput.focus(); return; }
 
     var id='r'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
@@ -1775,7 +1775,7 @@ body{font-size:16px}
     var nickEl=f.querySelector('input[name=nick]'), bodyEl=f.querySelector('textarea[name=body]'), send=f.querySelector('.rvb-csend'), m=f.querySelector('.rvb-msg');
     var nick=(nickEl.value||'').trim(), body=(bodyEl.value||'').trim();
     function bad(t){ m.textContent=t; m.className='rvb-msg err'; }
-    if(!nick){ bad('별명을 적어 주세요.'); nickEl.focus(); return; }
+    if(!nick){ bad('닉네임을 적어 주세요.'); nickEl.focus(); return; }
     if(body.length<2){ bad('댓글을 2자 이상 적어 주세요.'); bodyEl.focus(); return; }
 
     var cid='c'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
