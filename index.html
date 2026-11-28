@@ -411,6 +411,89 @@ body.menu-open .nav-toggle i::after{top:0;transform:rotate(-45deg)}
 .rev-who b{display:block;font-size:13.5px;color:var(--ink);font-weight:600;line-height:1.4}
 .rev-who div>span{display:block;font-size:12.3px;color:var(--muted);line-height:1.4}
 
+/* ---------- 실제 사용 후기 게시판 (방문자 작성 + 댓글) ---------- */
+.rvb{margin-top:30px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px 26px 22px}
+.rvb-top{display:flex;align-items:flex-end;justify-content:space-between;gap:16px 24px;flex-wrap:wrap;padding-bottom:18px;border-bottom:1px solid var(--line-2)}
+.rvb-kicker{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;letter-spacing:.06em;color:var(--blue)}
+.rvb-top h3{margin-top:8px;font-size:21px;line-height:1.45;letter-spacing:-.03em;color:var(--navy);font-weight:700}
+.rvb-top h3 em{font-style:normal;color:var(--blue)}
+.rvb-desc{margin-top:8px;font-size:14.2px;line-height:1.7;color:#5A6680;max-width:620px}
+.rvb-stat{font-size:13.5px;color:var(--muted);white-space:nowrap;line-height:1.6}
+.rvb-stat b{color:var(--navy);font-size:15px;font-weight:700}
+.rvb-form{margin-top:20px;background:var(--mist);border:1px solid var(--line-2);border-radius:10px;padding:18px 18px 16px}
+.rvb-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rvb-field{display:block}
+.rvb-field>span{display:block;font-size:13px;font-weight:600;color:#33405C;margin-bottom:6px}
+.rvb-field>span i{font-style:normal;font-weight:600;font-size:11.5px;color:var(--muted);margin-left:4px}
+.rvb-field input,.rvb-field textarea{display:block;width:100%;border:1px solid #D5DEEB;border-radius:8px;background:#fff;padding:11px 13px;font-family:inherit;font-size:14.5px;color:var(--ink);line-height:1.55}
+.rvb-field input::placeholder,.rvb-field textarea::placeholder{color:#9AA5B8}
+.rvb-field textarea{resize:vertical;min-height:98px}
+.rvb-field input:focus,.rvb-field textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(30,106,225,.12)}
+.rvb-field.is-bad input,.rvb-field.is-bad textarea{border-color:#D93A3A;box-shadow:0 0 0 3px rgba(217,58,58,.1)}
+.rvb-starfield{margin:14px 0 0}
+.rvb-starfield>span{display:block;font-size:13px;font-weight:600;color:#33405C;margin-bottom:5px}
+.rvb-starfield>span i{font-style:normal;font-weight:600;font-size:11.5px;color:var(--muted);margin-left:4px}
+.rvb-stars{display:flex;align-items:center;gap:2px}
+.rvb-stars button{width:34px;height:34px;border:0;background:none;cursor:pointer;font-size:23px;line-height:1;color:#CBD5E4;padding:0;transition:color .12s}
+.rvb-stars button:hover,.rvb-stars button.on{color:var(--blue)}
+.rvb-stars .rvb-starval{font-size:13px;color:var(--muted);margin-left:8px}
+.rvb-field--body{margin-top:14px}
+.rvb-actions{display:flex;align-items:center;justify-content:space-between;gap:12px 16px;flex-wrap:wrap;margin-top:14px}
+.rvb-note{font-size:12.4px;line-height:1.6;color:var(--muted);max-width:520px}
+.rvb-msg{font-size:13px;font-weight:600;line-height:1.5;margin-top:10px}
+.rvb-msg:empty{display:none}
+.rvb-msg.err{color:#C0392B}
+.rvb-msg.ok{color:var(--blue-dark)}
+.rvb-list{margin-top:20px;display:flex;flex-direction:column;gap:12px}
+.rvb-item{border:1px solid var(--line);border-radius:10px;padding:18px 18px 14px;background:#fff}
+.rvb-item.is-fresh{border-color:#BFD6FA;background:#FBFDFF}
+.rvb-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.rvb-av{width:30px;height:30px;border-radius:50%;background:var(--blue-soft);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex:0 0 auto}
+.rvb-who{display:flex;flex-direction:column;min-width:0}
+.rvb-who b{font-size:14px;color:var(--ink);font-weight:700;line-height:1.35;overflow-wrap:anywhere}
+.rvb-who span{font-size:12.3px;color:var(--muted);line-height:1.35;overflow-wrap:anywhere}
+.rvb-starsro{margin-left:auto;font-size:12.6px;letter-spacing:.14em;color:var(--blue);white-space:nowrap}
+.rvb-text{margin-top:10px;font-size:14.6px;line-height:1.75;color:#3E4A63;white-space:pre-wrap;overflow-wrap:anywhere}
+.rvb-foot{margin-top:12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.rvb-cbtn{display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 12px;border:1px solid #D5DEEB;border-radius:7px;background:#fff;font-family:inherit;font-size:13px;font-weight:600;color:#33405C;cursor:pointer;transition:border-color .12s,color .12s}
+.rvb-cbtn:hover{border-color:var(--blue);color:var(--blue)}
+.rvb-cbtn svg{width:15px;height:15px;flex:0 0 auto}
+.rvb-time{margin-left:auto;font-size:12.2px;color:#9AA5B8;white-space:nowrap}
+.rvb-cmts{margin-top:12px;border-top:1px dashed var(--line);padding-top:12px;display:none}
+.rvb-item.open .rvb-cmts{display:block}
+.rvb-cmt{display:flex;gap:9px;padding:7px 0}
+.rvb-cmt .rvb-av{width:26px;height:26px;font-size:12px}
+.rvb-cmtbody{flex:1;min-width:0}
+.rvb-cmtbody b{font-size:13px;color:var(--ink);font-weight:700}
+.rvb-cmttime{font-size:11.8px;color:#9AA5B8;margin-left:6px}
+.rvb-cmtbody p{margin-top:2px;font-size:13.6px;line-height:1.65;color:#4C5871;white-space:pre-wrap;overflow-wrap:anywhere}
+.rvb-cmtnone{font-size:13px;color:var(--muted);padding:2px 0 8px}
+.rvb-cform{margin-top:10px;display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px;align-items:start}
+.rvb-cform input,.rvb-cform textarea{display:block;width:100%;border:1px solid #D5DEEB;border-radius:7px;background:#fff;padding:9px 11px;font-family:inherit;font-size:13.6px;color:var(--ink);line-height:1.5}
+.rvb-cform textarea{min-height:38px;resize:vertical}
+.rvb-cform input:focus,.rvb-cform textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(30,106,225,.12)}
+.rvb-csend{grid-column:2;justify-self:end;height:36px;padding:0 14px;border-radius:7px;border:1px solid var(--blue);background:var(--blue);color:#fff;font-family:inherit;font-size:13.4px;font-weight:600;cursor:pointer}
+.rvb-csend:hover{background:var(--blue-dark);border-color:var(--blue-dark)}
+.rvb-csend[disabled]{opacity:.55;cursor:default}
+.rvb-empty{margin-top:18px;padding:24px 18px;text-align:center;font-size:14px;line-height:1.7;color:var(--muted);border:1px dashed #D5DEEB;border-radius:10px;background:#FBFCFE}
+.rvb-empty b{display:block;color:#33405C;font-size:14.5px;font-weight:600;margin-bottom:4px}
+@media (max-width:760px){
+  .rvb{margin-top:22px;padding:18px 16px 16px;border-radius:10px}
+  .rvb-top{padding-bottom:14px}
+  .rvb-top h3{font-size:18px;line-height:1.42}
+  .rvb-desc{font-size:13.6px}
+  .rvb-form{padding:14px 14px 12px}
+  .rvb-row{grid-template-columns:1fr}
+  .rvb-list{margin-top:16px;gap:10px}
+  .rvb-item{padding:15px 14px 12px}
+  .rvb-text{font-size:14px;line-height:1.7}
+  .rvb-cform{grid-template-columns:1fr}
+  .rvb-csend{grid-column:1;justify-self:stretch;width:100%}
+  .rvb-stars button{width:32px;height:32px}
+  .rvb-actions{justify-content:flex-start}
+  .rvb-actions .btn{width:100%}
+}
+
 .map-card{margin-top:18px;display:flex;align-items:center;gap:18px 26px;padding:22px 26px;background:var(--navy);border-radius:10px;flex-wrap:wrap}
 .map-card>div{flex:1;min-width:250px}
 .map-card .map-k{font-size:12px;font-weight:700;letter-spacing:.1em;color:#8FB4F5;text-transform:uppercase}
@@ -1155,6 +1238,51 @@ body{font-size:16px}
       </article>
     </div>
 
+    <!-- 실제 사용 후기 게시판: 방문자가 별명으로 직접 작성 + 후기별 댓글 -->
+    <div class="rvb" id="review-board">
+      <div class="rvb-top">
+        <div>
+          <p class="rvb-kicker">💬 실제 사용 후기 게시판</p>
+          <h3>쓰고 계신 중개사가 <em>별명으로 직접</em> 남깁니다.</h3>
+          <p class="rvb-desc">실명 대신 편한 별명으로 쓰실 수 있습니다. 남겨 주신 후기는 이 자리에 바로 올라가고, 다른 중개사가 댓글로 이어서 답할 수 있습니다.</p>
+        </div>
+        <p class="rvb-stat"><b id="rvb-count">0</b>개 후기 · <b id="rvb-ccount">0</b>개 댓글</p>
+      </div>
+
+      <form class="rvb-form" id="rvb-form" novalidate>
+        <div class="rvb-row">
+          <label class="rvb-field" id="rvb-f-nick"><span>별명 <i>필수</i></span>
+            <input type="text" name="nick" maxlength="20" placeholder="실명 대신 편한 닉네임, 예: 부평 15년차" autocomplete="off">
+          </label>
+          <label class="rvb-field"><span>지역 / 사무소 유형 <i>선택</i></span>
+            <input type="text" name="region" maxlength="40" placeholder="예: 인천 부평 · 아파트 전문" autocomplete="off">
+          </label>
+        </div>
+        <div class="rvb-starfield" role="radiogroup" aria-label="별점">
+          <span>별점 <i>필수</i></span>
+          <div class="rvb-stars" id="rvb-stars">
+            <button type="button" data-v="1" aria-label="별점 1점" aria-pressed="false">★</button>
+            <button type="button" data-v="2" aria-label="별점 2점" aria-pressed="false">★</button>
+            <button type="button" data-v="3" aria-label="별점 3점" aria-pressed="false">★</button>
+            <button type="button" data-v="4" aria-label="별점 4점" aria-pressed="false">★</button>
+            <button type="button" data-v="5" aria-label="별점 5점" aria-pressed="true">★</button>
+            <span class="rvb-starval" id="rvb-starval">5점 · 최고예요</span>
+          </div>
+        </div>
+        <label class="rvb-field rvb-field--body" id="rvb-f-body"><span>후기 내용 <i>필수</i></span>
+          <textarea name="body" rows="4" maxlength="1200" placeholder="중개톡을 쓰고 달라진 점을 편하게 적어 주세요. (예: 만기 알림을 놓치지 않게 됐어요)"></textarea>
+        </label>
+        <div class="rvb-actions">
+          <p class="rvb-note">광고·비방·개인정보가 담긴 글은 운영자가 숨길 수 있습니다. 실명과 연락처는 적지 마세요.</p>
+          <button class="btn btn-blue" type="submit" id="rvb-submit">후기 등록</button>
+        </div>
+        <p class="rvb-msg" id="rvb-msg" role="status" aria-live="polite"></p>
+      </form>
+
+      <ul class="rvb-list" id="rvb-list" aria-live="polite"></ul>
+      <p class="rvb-empty" id="rvb-empty"><b>아직 등록된 후기가 없습니다.</b>첫 후기를 남겨 주세요.</p>
+    </div>
+
     <a class="map-card" href="https://joonggaetalk.co.kr/members" target="_blank" rel="noopener noreferrer">
       <div class="map-head">
         <div class="map-txt">
@@ -1360,6 +1488,313 @@ body{font-size:16px}
       btn.classList.add('is-active'); btn.setAttribute('aria-pressed','true');
     });
   });
+})();
+</script>
+<script>
+(function(){
+  var SHEET_ID='1wzeaQ8YfaL2JmevV8cZzb8Jh09GboZ8MBRII6dancws';
+  var FORM_REVIEW='https://docs.google.com/forms/d/e/1FAIpQLSd2TzR5t7pVfPPlbVqLbKugQUwhVbFaZLL5Ep6SC3PaBgUDUA/formResponse';
+  var E_NICK='entry.1418373959', E_REGION='entry.155309829', E_STARS='entry.1548949094', E_BODY='entry.965401883', E_ID='entry.1839326613';
+  var FORM_CMT='https://docs.google.com/forms/d/e/1FAIpQLScGp-W9EY-GOpLi-0jRlaqcSqnX_CzUzOJY2ILmzZuA3QkrAw/formResponse';
+  var C_RID='entry.344665435', C_NICK='entry.1804569023', C_BODY='entry.1208326603', C_ID='entry.366198893';
+  var PENDING_KEY='jgt_rvb_pending_v1', NICK_KEY='jgt_rvb_nick';
+  var STAR_LABEL={5:'최고예요',4:'좋아요',3:'보통',2:'아쉬워요',1:'별로예요'};
+
+  var $=function(s,root){ return (root||document).querySelector(s); };
+  var listEl=$('#rvb-list'), emptyEl=$('#rvb-empty'), msgEl=$('#rvb-msg');
+  if(!listEl) return;
+
+  var state={reviews:[], comments:{}, loaded:false, failed:false, stars:5};
+  var openSet={};
+
+  /* ---------- 저장소 (낙관적 UI 유지용) ---------- */
+  function readPending(){
+    var p={reviews:[],comments:[]}, now=Date.now();
+    try{ p=JSON.parse(localStorage.getItem(PENDING_KEY)||'null')||p; }catch(e){ p={reviews:[],comments:[]}; }
+    p.reviews=(p.reviews||[]).filter(function(r){ return r && r.id && (now-r.ts)<86400000; });
+    p.comments=(p.comments||[]).filter(function(c){ return c && c.id && c.rid && (now-c.ts)<86400000; });
+    return p;
+  }
+  function writePending(p){ try{ localStorage.setItem(PENDING_KEY, JSON.stringify(p)); }catch(e){} }
+
+  /* ---------- 값 파싱 ---------- */
+  function txt(c){ if(!c) return ''; if(c.v==null) return ''; return String(c.v); }
+  function cellDate(c){
+    if(!c) return null;
+    var v=c.v;
+    if(typeof v==='string'){
+      var m=/^Date\((\d+),(\d+),(\d+)(?:,(\d+),(\d+),(\d+))?\)$/.exec(v);
+      if(m) return new Date(+m[1],+m[2],+m[3],+(m[4]||0),+(m[5]||0),+(m[6]||0));
+      var d=new Date(v.replace(' ','T'));
+      if(!isNaN(d.getTime())) return d;
+    }
+    return null;
+  }
+  function rel(d){
+    if(!d) return '';
+    var diff=Math.round((Date.now()-d.getTime())/60000);
+    if(diff<1) return '방금 전';
+    if(diff<60) return diff+'분 전';
+    if(diff<60*24) return Math.round(diff/60)+'시간 전';
+    if(diff<60*24*7) return Math.round(diff/1440)+'일 전';
+    return d.getFullYear()+'.'+('0'+(d.getMonth()+1)).slice(-2)+'.'+('0'+d.getDate()).slice(-2);
+  }
+  function starsRo(n){
+    n=Math.max(1,Math.min(5,parseInt(n,10)||5));
+    var s=''; for(var i=0;i<n;i++) s+='★'; for(var j=n;j<5;j++) s+='☆';
+    return s;
+  }
+
+  /* ---------- 구글 시트 읽기 (gviz JSONP) ---------- */
+  var cbSeq=0;
+  function loadSheet(sheet, tq){
+    return new Promise(function(resolve,reject){
+      var name='__rvbCb'+(++cbSeq), done=false, script=document.createElement('script');
+      function cleanup(){ clearTimeout(timer); try{ delete window[name]; }catch(e){ window[name]=undefined; } if(script.parentNode) script.parentNode.removeChild(script); }
+      var timer=setTimeout(function(){ if(done) return; done=true; cleanup(); reject(new Error('timeout')); }, 9000);
+      window[name]=function(res){ if(done) return; done=true; cleanup(); if(!res||res.status==='error'){ reject(new Error('gviz')); return; } resolve(res); };
+      script.onerror=function(){ if(done) return; done=true; cleanup(); reject(new Error('network')); };
+      var u='https://docs.google.com/spreadsheets/d/'+SHEET_ID+'/gviz/tq?tqx=responseHandler:'+name+'&headers=1&sheet='+encodeURIComponent(sheet);
+      if(tq) u+='&tq='+encodeURIComponent(tq);
+      script.src=u;
+      document.head.appendChild(script);
+    });
+  }
+  function rowsOf(res){
+    var rows=(((res||{}).table||{}).rows)||[];
+    return rows.map(function(r){ return (r&&r.c)||[]; });
+  }
+  function fetchAll(){
+    return Promise.all([
+      loadSheet('후기', "select A,B,C,D,E,F where G='공개'"),
+      loadSheet('댓글', "select A,B,C,D,E where F='공개'")
+    ]).then(function(r){
+      var reviews=rowsOf(r[0]).map(function(c){
+        return {id:txt(c[0]),time:cellDate(c[1]),nick:txt(c[2])||'중개사',region:txt(c[3]),stars:parseInt(txt(c[4]),10)||5,body:txt(c[5])};
+      }).filter(function(x){ return x.id && x.body; });
+      var comments=rowsOf(r[1]).map(function(c){
+        return {rid:txt(c[0]),id:txt(c[1]),time:cellDate(c[2]),nick:txt(c[3])||'중개사',body:txt(c[4])};
+      }).filter(function(x){ return x.rid && x.id && x.body; });
+      var byReview={};
+      comments.forEach(function(c){ (byReview[c.rid]=byReview[c.rid]||[]).push(c); });
+      state.reviews=reviews; state.comments=byReview; state.loaded=true; state.failed=false;
+      dropSyncedPending();
+      render();
+    }).catch(function(){
+      state.failed=true; state.loaded=true; render();
+    });
+  }
+  function dropSyncedPending(){
+    var p=readPending(), changed=false;
+    var serverIds={}; state.reviews.forEach(function(r){ serverIds[r.id]=1; });
+    var serverC={}; Object.keys(state.comments).forEach(function(k){ state.comments[k].forEach(function(c){ serverC[c.id]=1; }); });
+    var r2=p.reviews.filter(function(r){ if(serverIds[r.id]){ changed=true; return false; } return true; });
+    var c2=p.comments.filter(function(c){ if(serverC[c.id]){ changed=true; return false; } return true; });
+    if(changed){ p.reviews=r2; p.comments=c2; writePending(p); }
+  }
+
+  /* ---------- 화면 그리기 ---------- */
+  function makeAv(name){ var d=document.createElement('span'); d.className='rvb-av'; d.textContent=(name||'?').slice(0,1); return d; }
+  function drawComment(c){
+    var row=document.createElement('div'); row.className='rvb-cmt'; row.setAttribute('data-cid',c.id||'');
+    row.appendChild(makeAv(c.nick));
+    var b=document.createElement('div'); b.className='rvb-cmtbody';
+    var who=document.createElement('div');
+    var nm=document.createElement('b'); nm.textContent=c.nick;
+    var tm=document.createElement('span'); tm.className='rvb-cmttime'; tm.textContent=rel(c.time);
+    who.appendChild(nm); who.appendChild(tm);
+    var p=document.createElement('p'); p.textContent=c.body;
+    b.appendChild(who); b.appendChild(p); row.appendChild(b);
+    return row;
+  }
+  function commentForm(rid){
+    var f=document.createElement('form'); f.className='rvb-cform'; f.setAttribute('data-rid',rid);
+    var nick=document.createElement('input'); nick.type='text'; nick.name='nick'; nick.maxLength=20; nick.placeholder='별명'; nick.value=savedNick(); nick.setAttribute('aria-label','댓글 별명');
+    var body=document.createElement('textarea'); body.name='body'; body.rows=1; body.maxLength=400; body.placeholder='댓글을 남겨 주세요 (별명으로 표시됩니다)'; body.setAttribute('aria-label','댓글 내용');
+    var send=document.createElement('button'); send.type='submit'; send.className='rvb-csend'; send.textContent='댓글 등록';
+    var msg=document.createElement('p'); msg.className='rvb-msg'; msg.setAttribute('role','status');
+    f.appendChild(nick); f.appendChild(body); f.appendChild(send); f.appendChild(msg);
+    return f;
+  }
+  function drawReview(r){
+    var li=document.createElement('li'); li.className='rvb-item'+(r.fresh?' is-fresh':'')+(openSet[r.id]?' open':'');
+    li.setAttribute('data-id',r.id);
+
+    var meta=document.createElement('div'); meta.className='rvb-meta';
+    meta.appendChild(makeAv(r.nick));
+    var who=document.createElement('div'); who.className='rvb-who';
+    var nm=document.createElement('b'); nm.textContent=r.nick;
+    who.appendChild(nm);
+    if(r.region){ var rg=document.createElement('span'); rg.textContent=r.region; who.appendChild(rg); }
+    meta.appendChild(who);
+    var st=document.createElement('span'); st.className='rvb-starsro'; st.textContent=starsRo(r.stars); st.setAttribute('aria-label','별점 '+r.stars+'점');
+    meta.appendChild(st);
+    li.appendChild(meta);
+
+    var body=document.createElement('p'); body.className='rvb-text'; body.textContent=r.body; li.appendChild(body);
+
+    var cmts=(state.comments[r.id]||[]);
+    var pend=readPending().comments.filter(function(c){ return c.rid===r.id; });
+    var all=cmts.map(function(c){ return {nick:c.nick,body:c.body,time:c.time,id:c.id}; })
+      .concat(pend.map(function(c){ return {nick:c.nick,body:c.body,time:new Date(c.ts),id:c.id}; }));
+
+    var foot=document.createElement('div'); foot.className='rvb-foot';
+    var btn=document.createElement('button'); btn.type='button'; btn.className='rvb-cbtn'; btn.setAttribute('data-toggle',r.id); btn.setAttribute('aria-expanded',openSet[r.id]?'true':'false');
+    var ico=document.createElementNS('http://www.w3.org/2000/svg','svg'); ico.setAttribute('viewBox','0 0 24 24'); ico.setAttribute('fill','none'); ico.setAttribute('stroke','currentColor'); ico.setAttribute('stroke-width','2'); ico.setAttribute('aria-hidden','true');
+    var path=document.createElementNS('http://www.w3.org/2000/svg','path'); path.setAttribute('d','M21 11.5a8.4 8.4 0 0 1-8.5 8.5 8.6 8.6 0 0 1-3.9-.9L3 21l1.9-5.6A8.5 8.5 0 1 1 21 11.5z'); path.setAttribute('stroke-linecap','round'); path.setAttribute('stroke-linejoin','round');
+    ico.appendChild(path);
+    btn.appendChild(ico);
+    btn.appendChild(document.createTextNode(all.length?('댓글 '+all.length+'개'):'댓글 쓰기'));
+    foot.appendChild(btn);
+    var tm=document.createElement('span'); tm.className='rvb-time'; tm.textContent=rel(r.time); foot.appendChild(tm);
+    li.appendChild(foot);
+
+    var box=document.createElement('div'); box.className='rvb-cmts';
+    if(!all.length){ var none=document.createElement('p'); none.className='rvb-cmtnone'; none.textContent='아직 댓글이 없습니다. 첫 댓글을 남겨 보세요.'; box.appendChild(none); }
+    all.forEach(function(c){ box.appendChild(drawComment(c)); });
+    box.appendChild(commentForm(r.id));
+    li.appendChild(box);
+    return li;
+  }
+
+  function visibleReviews(){
+    var p=readPending();
+    var serverIds={};
+    state.reviews.forEach(function(r){ serverIds[r.id]=1; });
+    var list=state.reviews.slice();
+    p.reviews.forEach(function(r){
+      if(serverIds[r.id]) return;
+      list.push({id:r.id,time:new Date(r.ts),nick:r.nick,region:r.region,stars:r.stars,body:r.body,fresh:true});
+    });
+    list.sort(function(a,b){ return (b.time?b.time.getTime():0)-(a.time?a.time.getTime():0); });
+    return list;
+  }
+
+  function render(){
+    var reviews=visibleReviews();
+    var p=readPending();
+    var totalC=0;
+    Object.keys(state.comments).forEach(function(k){ totalC+=state.comments[k].length; });
+    totalC+=p.comments.length;
+    $('#rvb-count').textContent=reviews.length; $('#rvb-ccount').textContent=totalC;
+
+    listEl.textContent='';
+    reviews.forEach(function(r){ listEl.appendChild(drawReview(r)); });
+
+    if(reviews.length){
+      emptyEl.style.display='none';
+    }else{
+      emptyEl.style.display='';
+      if(state.failed){
+        emptyEl.innerHTML='<b>후기 목록을 불러오지 못했습니다.</b>잠시 후 새로고침해 주세요. 후기 등록은 그대로 하실 수 있습니다.';
+      }else if(state.loaded){
+        emptyEl.innerHTML='<b>아직 등록된 후기가 없습니다.</b>첫 후기를 남겨 주세요.';
+      }
+    }
+  }
+
+  /* ---------- 별명 기억 ---------- */
+  function savedNick(){ try{ return localStorage.getItem(NICK_KEY)||''; }catch(e){ return ''; } }
+  function saveNick(n){ try{ if(n) localStorage.setItem(NICK_KEY,n); }catch(e){} }
+
+  /* ---------- 별점 ---------- */
+  var starBox=$('#rvb-stars'), starVal=$('#rvb-starval');
+  function paintStars(v){
+    state.stars=v;
+    Array.prototype.forEach.call(starBox.querySelectorAll('button'),function(b){
+      var on=parseInt(b.getAttribute('data-v'),10)<=v;
+      b.classList.toggle('on',on); b.setAttribute('aria-pressed', parseInt(b.getAttribute('data-v'),10)===v?'true':'false');
+    });
+    starVal.textContent=v+'점 · '+(STAR_LABEL[v]||'');
+  }
+  starBox.addEventListener('click',function(e){
+    var b=e.target.closest('button[data-v]'); if(!b) return;
+    paintStars(parseInt(b.getAttribute('data-v'),10));
+  });
+  paintStars(5);
+
+  /* ---------- 메시지 ---------- */
+  function say(text,kind){
+    msgEl.textContent=text||'';
+    msgEl.className='rvb-msg'+(kind?' '+kind:'');
+  }
+
+  /* ---------- 후기 등록 ---------- */
+  var form=$('#rvb-form'), submitBtn=$('#rvb-submit');
+  var nickInput=form.querySelector('input[name=nick]'), regionInput=form.querySelector('input[name=region]'), bodyInput=form.querySelector('textarea[name=body]');
+  nickInput.value=savedNick();
+
+  function markBad(id,bad){ var el=$(id); if(el) el.classList.toggle('is-bad',!!bad); }
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var nick=(nickInput.value||'').trim(), region=(regionInput.value||'').trim(), body=(bodyInput.value||'').trim();
+    markBad('#rvb-f-nick',false); markBad('#rvb-f-body',false);
+    if(!nick){ markBad('#rvb-f-nick',true); say('별명을 적어 주세요. 실명 대신 편한 닉네임이면 됩니다.','err'); nickInput.focus(); return; }
+    if(body.length<5){ markBad('#rvb-f-body',true); say('후기 내용을 5자 이상 적어 주세요.','err'); bodyInput.focus(); return; }
+
+    var id='r'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+    var params=new URLSearchParams();
+    params.set(E_NICK,nick.slice(0,20));
+    params.set(E_REGION,region.slice(0,40));
+    params.set(E_STARS,String(state.stars));
+    params.set(E_BODY,body.slice(0,1200));
+    params.set(E_ID,id);
+
+    submitBtn.disabled=true; var oldLabel=submitBtn.textContent; submitBtn.textContent='등록 중…';
+    fetch(FORM_REVIEW,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body:params.toString()})
+      .then(function(){
+        var p=readPending();
+        p.reviews.unshift({id:id,ts:Date.now(),nick:nick.slice(0,20),region:region.slice(0,40),stars:state.stars,body:body.slice(0,1200)});
+        writePending(p); saveNick(nick);
+        bodyInput.value='';
+        say('후기가 등록되었습니다. 이 화면에 바로 보이고, 잠시 뒤 다른 방문자에게도 표시됩니다.','ok');
+        render();
+      })
+      .catch(function(){ say('등록에 실패했습니다. 잠시 후 다시 시도해 주세요.','err'); })
+      .then(function(){ submitBtn.disabled=false; submitBtn.textContent=oldLabel; });
+  });
+
+  /* ---------- 댓글 토글·등록 ---------- */
+  listEl.addEventListener('click',function(e){
+    var b=e.target.closest('button[data-toggle]');
+    if(b){
+      var id=b.getAttribute('data-toggle'), li=b.closest('.rvb-item');
+      openSet[id]=!openSet[id];
+      li.classList.toggle('open',!!openSet[id]);
+      b.setAttribute('aria-expanded',openSet[id]?'true':'false');
+      if(openSet[id]){ var inp=li.querySelector('.rvb-cform textarea'); if(inp) inp.focus({preventScroll:true}); }
+    }
+  });
+  listEl.addEventListener('submit',function(e){
+    var f=e.target.closest('.rvb-cform'); if(!f) return;
+    e.preventDefault();
+    var rid=f.getAttribute('data-rid');
+    var nickEl=f.querySelector('input[name=nick]'), bodyEl=f.querySelector('textarea[name=body]'), send=f.querySelector('.rvb-csend'), m=f.querySelector('.rvb-msg');
+    var nick=(nickEl.value||'').trim(), body=(bodyEl.value||'').trim();
+    function bad(t){ m.textContent=t; m.className='rvb-msg err'; }
+    if(!nick){ bad('별명을 적어 주세요.'); nickEl.focus(); return; }
+    if(body.length<2){ bad('댓글을 2자 이상 적어 주세요.'); bodyEl.focus(); return; }
+
+    var cid='c'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+    var params=new URLSearchParams();
+    params.set(C_RID,rid); params.set(C_NICK,nick.slice(0,20)); params.set(C_BODY,body.slice(0,400)); params.set(C_ID,cid);
+
+    send.disabled=true; send.textContent='등록 중…';
+    fetch(FORM_CMT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body:params.toString()})
+      .then(function(){
+        var p=readPending();
+        p.comments.push({id:cid,rid:rid,ts:Date.now(),nick:nick.slice(0,20),body:body.slice(0,400)});
+        writePending(p); saveNick(nick); openSet[rid]=true;
+        render();
+        var li=listEl.querySelector('.rvb-item[data-id="'+rid+'"]');
+        if(li){ li.classList.add('open'); var inp=li.querySelector('.rvb-cform textarea'); if(inp) inp.focus({preventScroll:true}); }
+      })
+      .catch(function(){ bad('댓글 등록에 실패했습니다. 잠시 후 다시 시도해 주세요.'); send.disabled=false; send.textContent='댓글 등록'; });
+  });
+
+  render();
+  fetchAll();
 })();
 </script>
 </body>
